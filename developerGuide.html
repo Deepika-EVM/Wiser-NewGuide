@@ -1,0 +1,2453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Guide</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Left Navigation Panel -->
+      <nav class="nav-panel">
+        <div class="main-nav">
+          <div class="nav-item active" data-section="product-card">
+            <i class="fas fa-box"></i>
+            <span>Product Card</span>
+          </div>
+          <div class="nav-item" data-section="slider-settings">
+            <i class="fas fa-sliders-h"></i>
+            <span>Slider Settings</span>
+          </div>
+          <div class="nav-item" data-section="cart-drawer">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart Drawer Settings</span>
+          </div>
+          <div class="nav-item" data-section="main-widgets">
+            <i class="fa fa-th-large" aria-hidden="true"></i>
+            <span>Main Widgets Settings</span>
+          </div>
+          <div class="nav-item important-note" data-section="Important-Note">
+            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+            <span>Important Note</span>
+          </div>
+        </div>
+      </nav>
+      <!-- Right Content Area -->
+      <main class="content-area">
+        <!-- Product Card Section -->
+        <div class="section-content active" id="product-card">
+          <div class="horizontal-tabs">
+            <div class="tab-nav">
+              <a href="#" class="tab-btn active" data-tab="Heading">Heading</a>
+              <a href="#" class="tab-btn" data-tab="Image">Image</a>
+              <a href="#" class="tab-btn" data-tab="title">Title</a>
+              <a href="#" class="tab-btn" data-tab="price">Price</a>
+              <a href="#" class="tab-btn" data-tab="button">Button</a>
+              <a href="#" class="tab-btn" data-tab="Vendor">Vendor</a>
+              <a href="#" class="tab-btn" data-tab="Badge">Badge</a>
+              <a href="#" class="tab-btn" data-tab="Wishlist">Wishlist</a>
+              <a href="#" class="tab-btn" data-tab="Drawer">Drawer</a
+              ><a href="#" class="tab-btn" data-tab="Db-function"
+                >Db Function/Html</a
+              >
+            </div>
+            <!-- Heading Section -->
+            <div class="evm_heading-setting_outer evm_ws_outer" id="Heading">
+              <div class="evm_heading-settings">
+                <h1>Heading Settings</h1>
+                <div class="user-guide" id="main-min-heading">
+                  <ul>
+                    <li>
+                      <strong>Choose a Tag:</strong> From the dropdown, you can
+                      select which HTML tag your Heading text should use, such
+                      as <code>h2</code>, <code>h3</code>, <code>h4</code>,
+                      <code>h5</code>, <code>h6</code>, <code>span</code>,
+                      <code>p</code>, or <code>div</code>. This controls how the
+                      content is rendered semantically.
+                    </li>
+                    <li>
+                      <strong>Add Class Name:</strong> In the input box below,
+                      you can enter a CSS class name for styling your Heading
+                      label (e.g., <code>title-large</code>,
+                      <code>Heading-color</code>, <code>Heading-bold</code>). If
+                      your theme already has styles for that class, you don’t
+                      need to write any additional CSS.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-nav">
+                <button class="tab-btn active" data-tab="overview-Heading">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="files-Heading">Files</button>
+                <button class="tab-btn" data-tab="test-cases-Heading">
+                  Test Cases
+                </button>
+                <button class="tab-btn" data-tab="examples-Heading">
+                  Examples
+                </button>
+                <button class="tab-btn" data-tab="notes-Heading">Notes</button>
+              </div>
+              <!-- overview for heading -->
+              <div
+                class="evm-tab-content tab-content-Heading active"
+                id="overview-Heading"
+              >
+                <h3>🛠️ Heading Settings – Overview</h3>
+                <ul>
+                  <li>
+                    <strong>Choose a Tag:</strong> Select a tag like
+                    <code>h2</code>, <code>p</code>, <code>div</code>, or
+                    <code>span</code>.
+                  </li>
+                  <li>
+                    <strong>How Tags Are Displayed:</strong> The appearance
+                    depends on the browser's default styling and your CSS.
+                  </li>
+                  <li>
+                    <strong>Add Class Name:</strong> Use classes like
+                    <code>Heading-bold</code>, <code>Heading-large</code>.
+                  </li>
+                  <li>
+                    <strong>Theme Support:</strong> Theme styles apply
+                    automatically to known classes.
+                  </li>
+                </ul>
+                <div class="example-container code-block" bis_skin_checked="1">
+                  <pre class="exampleCode">
+&lt;h2 class="heading-bold text-center"&gt;Your Heading Here&lt;/h2&gt;</pre
+                  >
+                </div>
+              </div>
+              <!-- files for heading -->
+              <div
+                class="evm-tab-content tab-content-Heading"
+                id="files-Heading"
+              >
+                <h2>Product Card Implementation</h2>
+                <div class="code-block">
+                  <pre><code>// Product card implementation code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- test cases for heading -->
+              <div
+                class="evm-tab-content tab-content-Heading"
+                id="test-cases-Heading"
+              >
+                <h2>Product Card Test Cases</h2>
+                <div class="test-cases">
+                  <div class="test-case">
+                    <h3>Test Case 1</h3>
+                    <p>Description of test case 1</p>
+                    <div class="test-status success">
+                      <i class="fas fa-check-circle"></i> <span>Passed</span>
+                    </div>
+                  </div>
+                  <div class="test-case">
+                    <h3>Test Case 2</h3>
+                    <p>Description of test case 2</p>
+                    <div class="test-status success">
+                      <i class="fas fa-clock"></i> <span>Success</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- example for heading -->
+              <div
+                class="evm-tab-content tab-content-Heading"
+                id="examples-Heading"
+                bis_skin_checked="1"
+              >
+                <h2>Product Card Examples</h2>
+                <div class="example-block" bis_skin_checked="1">
+                  <pre><code>// Product card example code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- notes for heading -->
+              <div
+                class="evm-tab-content tab-content-Heading"
+                id="notes-Heading"
+              >
+                <h2>Additional Notes</h2>
+                <p>
+                  Here you can add any miscellaneous notes or developer tips
+                  related to the product card implementation.
+                </p>
+              </div>
+            </div>
+            <!-- Image Section -->
+            <div class="evm_image-setting_outer evm_ws_outer" id="Image">
+              <div class="evm_image-settings" bis_skin_checked="1">
+                <h1>Image Settings</h1>
+                <div
+                  class="user-guide"
+                  id="main-min-heading"
+                  bis_skin_checked="1"
+                >
+                  <h3>🖼️ Image Aspect Ratios settings</h3>
+                  <p></p>
+                  <ul>
+                    <li>
+                      <strong>Square (1:1)</strong>: square shape,
+                      <strong>Portrait (4:5)</strong>: vertical image,
+                      <strong>Tall (2:3)</strong>: tall vertical image,
+                      <strong>Short (4:3)</strong>: wide horizontal image,
+                      <strong>Square (1:1) – fill card</strong>: square image
+                      fills card, <strong>Portrait (4:5) – fill card</strong>:
+                      vertical image fills card,
+                      <strong>Tall (2:3) – fill card</strong>: taller image
+                      fills card height,
+                      <strong>Short (4:3) – fill card</strong>: horizontal image
+                      fills width.
+                      <p></p>
+                    </li>
+                  </ul>
+                  <p></p>
+                </div>
+              </div>
+              <div class="tab-nav">
+                <button class="tab-btn active" data-tab="Overview-Image">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="files-Image">Files</button>
+                <button class="tab-btn" data-tab="test-cases-Image">
+                  Test Cases
+                </button>
+                <button class="tab-btn" data-tab="examples-Image">
+                  Examples
+                </button>
+                <button class="tab-btn" data-tab="notes-Image">Notes</button>
+              </div>
+              <!-- overview for image -->
+              <div
+                class="evm-tab-content tab-content-Image active"
+                id="Overview-Image"
+              >
+                <h3>🖼️ Image Settings – Overview</h3>
+                <ul>
+                  <li>
+                    <strong>Square (1:1):</strong>
+                    A square image has equal width and height, making it perfect
+                    for symmetrical product photos or icons. It keeps everything
+                    balanced and visually even.
+                    <br />
+                    **Example:** Product images that need to be perfectly
+                    proportioned for a clean, simple look.
+                  </li>
+                  <li>
+                    <strong>Portrait (4:5):</strong>
+                    A portrait image is slightly taller than it is wide. This is
+                    best for vertical images like fashion photos, art, or
+                    portraits, where the focus is on the height of the subject.
+                    <br />
+                    **Example:** Fashion photos, artwork, or close-up portraits.
+                  </li>
+                  <li>
+                    <strong>Tall (2:3):</strong>
+                    A tall image is even more vertical than the portrait ratio,
+                    offering a long vertical shape. It's great for editorial
+                    images, tall product shots, or portrait-style photos where
+                    height is the focus.
+                    <br />
+                    **Example:** Vertical editorial shots, or photos where the
+                    subject is taller than wide.
+                  </li>
+                  <li>
+                    <strong>Short (4:3):</strong>
+                    A short image is wider than it is tall. This is ideal for
+                    landscape shots or wide-angle images, as it provides more
+                    width than height.
+                    <br />
+                    **Example:** Landscape photography, group shots, or
+                    wide-angle views of products or scenes.
+                  </li>
+                </ul>
+
+                <h3>🧩 Fill Card Variants</h3>
+                <ul>
+                  <li>
+                    <strong>Square (1:1) – fill card:</strong>
+                    A square image will completely fill the card, keeping the
+                    width and height equal, so there are no gaps or empty spaces
+                    within the card.
+                    <br />
+                    **Usage:** Ideal for products that need equal width and
+                    height, such as small square-shaped items or icons.
+                  </li>
+                  <li>
+                    <strong>Portrait (4:5) – fill card:</strong>
+                    A portrait image will stretch vertically to fill the card.
+                    It’s taller, but it may lose some width depending on the
+                    card’s dimensions.
+                    <br />
+                    **Usage:** Best for vertical images like clothing or artwork
+                    that need to take up the full height of the card while
+                    adjusting slightly in width.
+                  </li>
+                  <li>
+                    <strong>Tall (2:3) – fill card:</strong>
+                    A tall image will fill the height of the card. If the card
+                    is taller than the image, the width will be adjusted
+                    accordingly.
+                    <br />
+                    **Usage:** Perfect for images with more height, such as tall
+                    product shots, posters, or editorial images.
+                  </li>
+                  <li>
+                    <strong>Short (4:3) – fill card:</strong>
+                    A short image will stretch horizontally to fill the card’s
+                    width. The height will be adjusted proportionally, ensuring
+                    there are no empty spaces.
+                    <br />
+                    **Usage:** Ideal for wide images like landscapes, wide-angle
+                    product shots, or group photos.
+                  </li>
+                </ul>
+
+                <div class="example-container code-block" bis_skin_checked="1">
+                  <pre class="exampleCode">
+&lt;img src="product.jpg" class="fill-card" alt="Product Image"&gt;</pre
+                  >
+                  <a
+                    href="#"
+                    id="goToExamples"
+                    data-target="Image"
+                    class="Image-example-link"
+                    >Click here and check example</a
+                  >
+                </div>
+              </div>
+
+              <!-- files for image -->
+              <div class="evm-tab-content tab-content-Image" id="files-Image">
+                <h2>Product Card Implementation</h2>
+                <div class="code-block">
+                  <pre><code>// Product card implementation code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- test cases for image -->
+              <div
+                class="evm-tab-content tab-content-Image"
+                id="test-cases-Image"
+              >
+                <h2>Product Card Test Cases</h2>
+                <div class="test-cases">
+                  <div class="test-case">
+                    <h3>Test Case 1</h3>
+                    <p>Description of test case 1</p>
+                    <div class="test-status success">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Passed</span>
+                    </div>
+                  </div>
+                  <div class="test-case">
+                    <h3>Test Case 2</h3>
+                    <p>Description of test case 2</p>
+                    <div class="test-status success">
+                      <i class="fas fa-clock"></i>
+                      <span>success</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- example for image -->
+              <div
+                class="evm-tab-content tab-content-Image"
+                id="examples-Image"
+                bis_skin_checked="1"
+              >
+                <h2 style="font-size: 24px; margin-bottom: 1rem">
+                  📸 Image Shape Examples – Visual Guide
+                </h2>
+
+                <!-- Description -->
+                <p style="font-size: 15px; margin-bottom: 1.5rem">
+                  Below is a visual reference showing different image aspect
+                  ratios used in product cards:
+                  <strong>Square (1:1)</strong>,
+                  <strong>Portrait (4:5)</strong>, <strong>Tall (2:3)</strong>,
+                  and <strong>Short (4:3)</strong>. These help ensure your
+                  product photos fit cleanly into your layout.
+                </p>
+
+                <!-- Image Preview -->
+                <div
+                  style="text-align: center; margin-bottom: 20px"
+                  bis_skin_checked="1"
+                >
+                  <a
+                    href="https://cdn.shopify.com/s/files/1/0044/7322/5334/files/Imagesize_guide.png?v=1744710022"
+                    target="_blank"
+                    bis_size='{"x":732,"y":2399,"w":709,"h":21,"abs_x":732,"abs_y":2399}'
+                  >
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0044/7322/5334/files/Imagesize_guide.png?v=1744710022"
+                      alt="Image Shape Guide"
+                      style="
+                        max-width: 60%;
+                        height: auto;
+                        border: 1px solid #e1dfe7;
+                        border-radius: 10px;
+                        box-shadow: 0 2px 4px rgba(65, 29, 87, 0.2);
+                        transition: box-shadow 0.3s ease;
+                      "
+                      bis_size='{"x":732,"y":1353,"w":709,"h":1063,"abs_x":732,"abs_y":1353}'
+                      bis_id="bn_onfof947uji5fqx0luk4hh"
+                    />
+                  </a>
+                </div>
+
+                <!-- Use Case Grid -->
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 1rem;
+                  "
+                  bis_skin_checked="1"
+                >
+                  <div bis_skin_checked="1">
+                    <strong>🟦 Square (1:1):</strong> Perfect for icons or
+                    balanced product photos.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>🧍 Portrait (4:5):</strong> Great for fashion, art,
+                    or vertical compositions.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>🏙️ Tall (2:3):</strong> Ideal for vertical product
+                    shots and editorial-style images.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>🌄 Short (4:3):</strong> Great for wide-angle
+                    product shots or group views.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>🖼️ Square – Fill Card:</strong> Fills the card
+                    without gaps – ideal for centered or symmetrical items.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>🖼️ Portrait – Fill Card:</strong> Stretches
+                    vertically, keeping subject height as focus.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>🖼️ Tall – Fill Card:</strong> Taller aspect ratio –
+                    perfect for elongated product displays.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>🖼️ Short – Fill Card:</strong> Wide visuals that
+                    fill horizontal card space completely.
+                  </div>
+                </div>
+              </div>
+              <!-- notes for image -->
+              <div class="evm-tab-content tab-content-Image" id="notes-Image">
+                <h2>Additional Notes</h2>
+                <p>
+                  Here you can add any miscellaneous notes or developer tips
+                  related to the product card implementation.
+                </p>
+              </div>
+            </div>
+            <!-- Title Section -->
+            <div class="evm_title-setting_outer evm_ws_outer" id="title">
+              <div class="evm_title-settings">
+                <h1>Title Settings</h1>
+                <div
+                  class="user-guide"
+                  id="main-min-heading"
+                  bis_skin_checked="1"
+                >
+                  <ul>
+                    <li>
+                      <strong>Choose a Tag:</strong> From the dropdown, you can
+                      select which HTML tag your Title text should use, such as
+                      <code>h2</code>, <code>h3</code>, <code>h4</code>,
+                      <code>h5</code>, <code>h6</code>, <code>span</code>,
+                      <code>p</code>, or <code>div</code>. This controls how the
+                      content is rendered semantically.
+                    </li>
+                    <li>
+                      <strong>Add Class Name:</strong> In the input box below,
+                      you can enter a CSS class name for styling your Title
+                      label (e.g., <code>title-large</code>,
+                      <code>Title-color</code>, <code>Title-bold</code>). If
+                      your theme already has styles for that class, you don’t
+                      need to write any additional CSS.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-nav">
+                <button class="tab-btn active" data-tab="overview-title">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="files-title">Files</button>
+                <button class="tab-btn" data-tab="test-cases-title">
+                  Test Cases
+                </button>
+                <button class="tab-btn" data-tab="examples-title">
+                  Examples
+                </button>
+                <button class="tab-btn" data-tab="notes-title">Notes</button>
+              </div>
+              <!-- overview for title -->
+              <div
+                class="evm-tab-content tab-content-title active"
+                id="overview-title"
+                bis_skin_checked="1"
+              >
+                <h3>🛠️ Title Settings – Overview</h3>
+                <ul>
+                  <li>
+                    <strong>Choose a Tag:</strong> Select a tag like
+                    <code>h2</code>, <code>p</code>, <code>div</code>, or
+                    <code>span</code>.
+                  </li>
+                  <li>
+                    <strong>How Tags Are Displayed:</strong> The appearance
+                    depends on the browser's default styling and your CSS.
+                  </li>
+                  <li>
+                    <strong>Add Class Name:</strong> Use classes like
+                    <code>Title-bold</code>, <code>Title-large</code>.
+                  </li>
+                  <li>
+                    <strong>Theme Support:</strong> Theme styles apply
+                    automatically to known classes.
+                  </li>
+                </ul>
+                <pre class="exampleCode">
+&lt;h2 class="title-bold text-center"&gt;Your Title Here&lt;/h2&gt;</pre
+                >
+              </div>
+              <!-- files for title -->
+              <div class="evm-tab-content tab-content-title" id="files-title">
+                <h2>Product Card Implementation</h2>
+                <div class="code-block">
+                  <pre><code>// Product card implementation code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- test cases for title -->
+              <div
+                class="evm-tab-content tab-content-title"
+                id="test-cases-title"
+              >
+                <h2>Product Card Test Cases</h2>
+                <div class="test-cases">
+                  <div class="test-case">
+                    <h3>Test Case 1</h3>
+                    <p>Description of test case 1</p>
+                    <div class="test-status success">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Passed</span>
+                    </div>
+                  </div>
+                  <div class="test-case">
+                    <h3>Test Case 2</h3>
+                    <p>Description of test case 2</p>
+                    <div class="test-status success">
+                      <i class="fas fa-clock"></i>
+                      <span>success</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- example for title -->
+              <div
+                class="evm-tab-content tab-content-title"
+                id="examples-title"
+              >
+                <h2>Product Card Examples</h2>
+                <div class="example-block">
+                  <pre><code>// Product card example code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- notes for title -->
+              <div class="evm-tab-content tab-content-title" id="notes-title">
+                <h2>Additional Notes</h2>
+                <p>
+                  Here you can add any miscellaneous notes or developer tips
+                  related to the product card implementation.
+                </p>
+              </div>
+            </div>
+            <!-- Price Section -->
+            <div class="evm_price-setting_outer evm_ws_outer" id="price">
+              <div class="evm_price-settings">
+                <h1>Price Settings</h1>
+                <div
+                  class="user-guide"
+                  id="main-min-heading"
+                  bis_skin_checked="1"
+                >
+                  <ul>
+                    <li>
+                      <strong>Choose a Tag:</strong> From the dropdown, you can
+                      select which HTML tag your Price text should use, such as
+                      <code>span</code>, <code>p</code>, or <code>div</code>.
+                      This controls how the content is rendered semantically.
+                    </li>
+                    <li>
+                      <strong>Add Class Name:</strong> In the input box below,
+                      you can enter a CSS class name for styling your Price
+                      label (e.g., <code>title-large</code>,
+                      <code>Price-color</code>, <code>Price-bold</code>). If
+                      your theme already has styles for that class, you don’t
+                      need to write any additional CSS.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-nav">
+                <button class="tab-btn active" data-tab="overview-price">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="files-price">Files</button>
+                <button class="tab-btn" data-tab="test-cases-price">
+                  Test Cases
+                </button>
+                <button class="tab-btn" data-tab="examples-price">
+                  Examples
+                </button>
+                <button class="tab-btn" data-tab="notes-price">Notes</button>
+              </div>
+              <!-- overview for price -->
+              <div
+                class="evm-tab-content tab-content-price active"
+                id="overview-price"
+                bis_skin_checked="1"
+              >
+                <h3>🛠️ Price Settings – Overview</h3>
+                <ul>
+                  <li>
+                    <strong>Choose a Tag:</strong> Select a tag like
+                    <code>p</code>, <code>div</code>, or <code>span</code>.
+                  </li>
+                  <li>
+                    <strong>How Tags Are Displayed:</strong> The appearance
+                    depends on the browser's default styling and your CSS.
+                  </li>
+                  <li>
+                    <strong>Add Class Name:</strong> Use classes like
+                    <code>price-bold</code>, <code>price-large</code>.
+                  </li>
+                  <li>
+                    <strong>Theme Support:</strong> Theme styles apply
+                    automatically to known classes.
+                  </li>
+                </ul>
+                <pre class="exampleCode">
+&lt;h2 class="price-bold text-center"&gt;Your price Here&lt;/h2&gt;</pre
+                >
+              </div>
+              <!-- files for price -->
+              <div class="evm-tab-content tab-content-price" id="files-price">
+                <h2>Product Card Implementation</h2>
+                <div class="code-block">
+                  <pre><code>// Product card implementation code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- test cases for price -->
+              <div
+                class="evm-tab-content tab-content-price"
+                id="test-cases-price"
+              >
+                <h2>Product Card Test Cases</h2>
+                <div class="test-cases">
+                  <div class="test-case">
+                    <h3>Test Case 1</h3>
+                    <p>Description of test case 1</p>
+                    <div class="test-status success">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Passed</span>
+                    </div>
+                  </div>
+                  <div class="test-case">
+                    <h3>Test Case 2</h3>
+                    <p>Description of test case 2</p>
+                    <div class="test-status success">
+                      <i class="fas fa-clock"></i>
+                      <span>success</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- example for price -->
+              <div
+                class="evm-tab-content tab-content-price"
+                id="examples-price"
+              >
+                <h2>Product Card Examples</h2>
+                <div class="example-block">
+                  <pre><code>// Product card example code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- notes for price -->
+              <div class="evm-tab-content tab-content-price" id="notes-price">
+                <h2>Additional Notes</h2>
+                <p>
+                  Here you can add any miscellaneous notes or developer tips
+                  related to the product card implementation.
+                </p>
+              </div>
+            </div>
+            <!-- Button Section -->
+            <div class="evm_button-setting_outer evm_ws_outer" id="button">
+              <div class="evm_button-settings">
+                <h1>Button Settings</h1>
+                <div
+                  class="user-guide"
+                  id="button-settings-guide"
+                  bis_skin_checked="1"
+                >
+                  <ul>
+                    <li>
+                      <strong>Choose a Tag:</strong> From the dropdown, you can
+                      select which HTML tag your Button text should use, such as
+                      <code>span</code>, <code>p</code>, or <code>div</code>.
+                      This controls how the content is rendered semantically.
+                    </li>
+                    <li>
+                      <strong>Add Class Name:</strong> In the input box below,
+                      you can enter a CSS class name for styling your Button
+                      label (e.g., <code>title-large</code>,
+                      <code>Button-color</code>, <code>Button-bold</code>). If
+                      your theme already has styles for that class, you don’t
+                      need to write any additional CSS.
+                    </li>
+                    <li>
+                      <strong>Position:</strong> Decide where the button appears
+                      – top, bottom, inside the card, or below the image.
+                    </li>
+                    <li>
+                      <strong>Button Type:</strong> Select if it's a real
+                      <code>button</code> or a clickable <code>link (a)</code>.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-nav">
+                <button class="tab-btn active" data-tab="overview-button">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="files-button">Files</button>
+                <button class="tab-btn" data-tab="test-cases-button">
+                  Test Cases
+                </button>
+                <button class="tab-btn" data-tab="examples-Button">
+                  Examples
+                </button>
+                <button class="tab-btn" data-tab="notes-button">Notes</button>
+              </div>
+              <!-- overview for Button -->
+              <div
+                class="evm-tab-content tab-content-button active"
+                id="overview-button"
+                bis_skin_checked="1"
+              >
+                <h3>🧩 Button Settings – Overview</h3>
+                <ul>
+                  <li>
+                    <strong>Choose a Tag:</strong> You can select which HTML tag
+                    your button should appear in: <code>div</code>,
+                    <code>span</code>, or <code>p</code>.
+                    <p>
+                      <strong>How Tags Are Displayed:</strong> The default
+                      appearance depends on the browser. For example,
+                      <code>button</code> tags come with built-in styles like
+                      borders and padding, while <code>span</code> is inline and
+                      has no default styling. You can override all appearances
+                      using custom CSS.
+                    </p>
+                  </li>
+
+                  <li>
+                    <strong>Add Class Name:</strong> You can apply one or more
+                    theme-compatible classes to style your button, These classes
+                    will automatically apply theme styles to your button.
+                  </li>
+
+                  <li>
+                    <strong>Button Position:</strong> Controls where the button
+                    appears inside the product card:
+                    <ul style="margin-top: 6px">
+                      <li><code>top</code> – At the top of the card</li>
+                      <li>
+                        <code>inside_card</code> – Within the card content
+                      </li>
+                      <li><code>img_bottom</code> – Below the image</li>
+                      <li><code>bottom</code> – At the bottom of the card</li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <strong>Button Type:</strong> Decide how the button should
+                    behave:
+                    <ul style="margin-top: 6px">
+                      <li>
+                        <code>button</code> – Performs actions like "Add to
+                        Cart"
+                      </li>
+                      <li>
+                        <code>a</code> – Navigates to a link or product page
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <strong>Theme Support:</strong> If you use class names from
+                    your Shopify theme (e.g., <code>btn</code>,
+                    <code>btn--primary</code>), the theme's built-in CSS will
+                    style the button automatically — no need to write custom CSS
+                    unless needed.
+                  </li>
+                </ul>
+                <div class="example-container code-block" bis_skin_checked="1">
+                  <pre class="exampleCode">
+&lt;button class="btn btn--primary btn--full text-uppercase"&gt;Add to Cart&lt;/button&gt;</pre
+                  >
+                  <pre class="exampleCode">
+&lt;a href="/product-page" class="btn btn--secondary"&gt;View Product&lt;/a&gt;</pre
+                  >
+                  <a
+                    href="#"
+                    id="goToExamples"
+                    data-target="Button"
+                    class="Button-example-link"
+                    >Click here and check example</a
+                  >
+                </div>
+              </div>
+              <!-- files for Button -->
+              <div class="evm-tab-content tab-content-button" id="files-button">
+                <h2>Product Card Implementation</h2>
+                <div class="code-block">
+                  <pre><code>// Product card implementation code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- test cases for Button -->
+              <div
+                class="evm-tab-content tab-content-button"
+                id="test-cases-button"
+              >
+                <h2>Product Card Test Cases</h2>
+                <div class="test-cases">
+                  <div class="test-case">
+                    <h3>Test Case 1</h3>
+                    <p>Description of test case 1</p>
+                    <div class="test-status success">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Passed</span>
+                    </div>
+                  </div>
+                  <div class="test-case">
+                    <h3>Test Case 2</h3>
+                    <p>Description of test case 2</p>
+                    <div class="test-status success">
+                      <i class="fas fa-clock"></i>
+                      <span>success</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- example for Button -->
+              <div
+                class="evm-tab-content tab-content-button"
+                id="examples-Button"
+                bis_skin_checked="1"
+              >
+                <h2 style="font-size: 24px; margin-bottom: 1rem">
+                  🔘 Button Position – Visual Guide
+                </h2>
+
+                <p style="font-size: 15px; margin-bottom: 1.5rem">
+                  This guide shows how the
+                  <strong>button_position</strong> setting affects where the
+                  button appears inside the product card. Options include:
+                  <strong>Top</strong>, <strong>Image Top</strong>,
+                  <strong>Image Bottom</strong>, and
+                  <strong>Card Bottom</strong>.
+                </p>
+
+                <!-- Image Preview -->
+                <div
+                  style="text-align: center; margin-bottom: 20px"
+                  bis_skin_checked="1"
+                >
+                  <a
+                    href="https://cdn.shopify.com/s/files/1/0044/7322/5334/files/Button_Position_Guide.png"
+                    target="_blank"
+                    bis_size='{"x":791,"y":4572,"w":591,"h":21,"abs_x":791,"abs_y":4572}'
+                  >
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0522/5932/4060/files/ChatGPT_Image_Apr_16_2025_12_54_02_PM.png?v=1744788342"
+                      alt="Button Position Guide"
+                      style="
+                        max-width: 60%;
+                        height: auto;
+                        border: 1px solid #e1dfe7;
+                        border-radius: 10px;
+                        box-shadow: 0 2px 4px rgba(65, 29, 87, 0.2);
+                        transition: box-shadow 0.3s ease;
+                      "
+                      bis_size='{"x":791,"y":3997,"w":591,"h":591,"abs_x":791,"abs_y":3997}'
+                      bis_id="bn_ldid5e7swyextbtyxwdswg"
+                    />
+                  </a>
+                </div>
+
+                <!-- Use Case Grid -->
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 1rem;
+                  "
+                  bis_skin_checked="1"
+                >
+                  <div bis_skin_checked="1">
+                    <strong>🔼 Top:</strong> Button appears above all content at
+                    the very top of the card.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>🖼️ Image Top:</strong> Button overlaps or sits
+                    directly above the image section.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>📷 Image Bottom:</strong> Button is placed right
+                    below the image, before the content (e.g., title/price).
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>🔽 Card Bottom:</strong> Button appears at the very
+                    bottom of the entire product card.
+                  </div>
+                </div>
+              </div>
+              <!-- notes for Button -->
+              <div class="evm-tab-content tab-content-button" id="notes-button">
+                <h2>Additional Notes</h2>
+                <p>
+                  Here you can add any miscellaneous notes or developer tips
+                  related to the product card implementation.
+                </p>
+              </div>
+            </div>
+
+            <!-- vendor Section -->
+            <div class="evm_vendor-setting_outer evm_ws_outer" id="Vendor">
+              <div class="evm_vendor-settings">
+                <h1>Vendor Settings</h1>
+                <div class="user-guide" id="Vendor-settings-guide">
+                  <ul>
+                    <li>
+                      <strong>Choose a Tag:</strong> From the dropdown, you can
+                      select which HTML tag your vendor text should use, such as
+                      <code>span</code>, <code>p</code>, or <code>div</code>.
+                      This controls how the content is rendered semantically.
+                    </li>
+                    <li>
+                      <strong>Add Class Name:</strong> In the input box below,
+                      you can enter a CSS class name for styling your vendor
+                      label (e.g., <code>title-large</code>,
+                      <code>Vendor-color</code>, <code>Vendor-bold</code>). If
+                      your theme already has styles for that class, you don’t
+                      need to write any additional CSS.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-nav">
+                <button class="tab-btn active" data-tab="overview-Vendor">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="files-Vendor">Files</button>
+                <button class="tab-btn" data-tab="test-cases-Vendor">
+                  Test Cases
+                </button>
+                <button class="tab-btn" data-tab="examples-Vendor">
+                  Examples
+                </button>
+                <button class="tab-btn" data-tab="notes-Vendor">Notes</button>
+              </div>
+              <!-- overview for Vendor -->
+              <div
+                class="evm-tab-content tab-content-Vendor active"
+                id="overview-Vendor"
+                bis_skin_checked="1"
+              >
+                <h3>🛠️ Vendor Settings – Overview</h3>
+                <ul>
+                  <li>
+                    <strong>Choose a Tag:</strong> Select a tag like
+                    <code>p</code>, <code>div</code>, or <code>span</code>.
+                  </li>
+                  <li>
+                    <strong>How Tags Are Displayed:</strong> The appearance
+                    depends on the browser's default styling and your CSS.
+                  </li>
+                  <li>
+                    <strong>Add Class Name:</strong> Use classes like
+                    <code>Vendor-bold</code>, <code>Vendor-large</code>.
+                  </li>
+                  <li>
+                    <strong>Theme Support:</strong> Theme styles apply
+                    automatically to known classes.
+                  </li>
+                </ul>
+                <pre class="exampleCode">
+&lt;h2 class="vendor-bold text-center"&gt;Your Vendor Here&lt;/h2&gt;</pre
+                >
+              </div>
+              <!-- files for Vendor -->
+              <div class="evm-tab-content tab-content-Vendor" id="files-Vendor">
+                <h2>Product Card Implementation</h2>
+                <div class="code-block">
+                  <pre><code>// Product card implementation code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- test cases for Vendor -->
+              <div
+                class="evm-tab-content tab-content-Vendor"
+                id="test-cases-Vendor"
+              >
+                <h2>Product Card Test Cases</h2>
+                <div class="test-cases">
+                  <div class="test-case">
+                    <h3>Test Case 1</h3>
+                    <p>Description of test case 1</p>
+                    <div class="test-status success">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Passed</span>
+                    </div>
+                  </div>
+                  <div class="test-case">
+                    <h3>Test Case 2</h3>
+                    <p>Description of test case 2</p>
+                    <div class="test-status success">
+                      <i class="fas fa-clock"></i>
+                      <span>success</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- example for Vendor -->
+              <div
+                class="evm-tab-content tab-content-Vendor"
+                id="examples-Vendor"
+              >
+                <h2>Product Card Examples</h2>
+                <div class="example-block">
+                  <pre><code>// Product card example code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- notes for Vendor -->
+              <div class="evm-tab-content tab-content-Vendor" id="notes-Vendor">
+                <h2>Additional Notes</h2>
+                <p>
+                  Here you can add any miscellaneous notes or developer tips
+                  related to the product card implementation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Badge Section -->
+            <div class="evm_Badge-setting_outer evm_ws_outer" id="Badge">
+              <div class="evm_Badge-settings">
+                <h1>Badge Settings</h1>
+                <div
+                  class="user-guide"
+                  id="Badge-settings-guide"
+                  bis_skin_checked="1"
+                >
+                  <ul>
+                    <li>
+                      <strong>Add Class Name:</strong> In the input box below,
+                      you can enter a CSS class name for your badge (e.g.,
+                      <code>badge-red</code>, <code>badge-outline</code>,
+                      <code>badge-glow</code>). If your theme already includes
+                      styling for that class, you don’t need to write any extra
+                      CSS.
+                    </li>
+                    <li>
+                      <strong>Position:</strong> Choose where the badge appears
+                      on the product image, such as <code>Top Right</code>,
+                      <code>Top Left</code>, <code>Bottom Left</code>, or
+                      <code>Bottom Right</code>.
+                    </li>
+                    <li>
+                      <strong>Product Tags Badge:</strong> Displays a custom
+                      badge when a product has specific tags. For example, if a
+                      product tag is <code>toys</code>, you can show a badge
+                      like <code>30 off at here</code>.
+                    </li>
+                    <li>
+                      <strong>Save Badge:</strong> Shows discount badges based
+                      on product pricing. You can display percentage off (e.g.,
+                      <code>20% off</code>) or amount saved (e.g.,
+                      <code>$5 save</code>) based on your settings.
+                    </li>
+                    <li>
+                      <strong>Product Type Badge:</strong> Automatically
+                      displays a badge showing the product type, like
+                      <code>Shirt</code> or <code>Accessories</code>, based on
+                      the product’s type.
+                    </li>
+                    <li>
+                      <strong>Add JSON in Max Badge:</strong> You can paste your
+                      badge configuration JSON in the box above to customize
+                      which badges appear based on tag, type, or pricing rules.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-nav">
+                <button class="tab-btn active" data-tab="overview-Badge">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="files-Badge">Files</button>
+                <button class="tab-btn" data-tab="test-cases-Badge">
+                  Test Cases
+                </button>
+                <button class="tab-btn" data-tab="examples-Badge">
+                  Examples
+                </button>
+                <button class="tab-btn" data-tab="notes-Badge">Notes</button>
+              </div>
+              <!-- overview for Badge -->
+              <div
+                class="evm-tab-content tab-content-Badge active"
+                id="overview-Badge"
+              >
+                <h3>🏷️ Badge Settings – Overview</h3>
+                <ul>
+                  <li>
+                    <strong>Add Class Name:</strong> In the input box below, you
+                    can enter a custom CSS class for your badge, such as
+                    <code>badge-red</code>, <code>badge-outline</code>, or
+                    <code>badge-glow</code>. If your theme already supports that
+                    class, it will automatically apply the styles—no extra CSS
+                    needed.
+                  </li>
+                  <li>
+                    <strong>Position:</strong> Use this setting to place the
+                    badge at a specific corner of the product image. Available
+                    options include <code>Top Right</code>,
+                    <code>Top Left</code>, <code>Bottom Left</code>, and
+                    <code>Bottom Right</code>. The badge will visually "stick"
+                    to the selected corner.
+                  </li>
+                  <li>
+                    <strong>Product Type Badge Settings:</strong> This section
+                    controls the product type badges shown on your product
+                    cards. To enable the badge, set
+                    <code>"productTypeBadgeproductTypeBadge": true</code>. The
+                    product type (such as "New Arrival", "Sale", "Featured",
+                    etc.) will be shown dynamically as the badge on your product
+                    card. <br /><br />
+                    <strong>Example:</strong>
+                    <div
+                      class="example-container code-block"
+                      bis_skin_checked="1"
+                    >
+                      <pre class="exampleCode">
+{
+    'roductTypeBadge': true
+  }</pre
+                      >
+                      <button class="copy-btn" onclick="copyWidgetCode()">
+                        📋 Copy
+                      </button>
+                    </div>
+
+                    This will display the corresponding product type badge
+                    (e.g., "New Arrival", "Sale", etc.) on your product card
+                    depending on the product type.
+                  </li>
+                  <li>
+                    <strong>SaveBadge Settings:</strong> This section controls
+                    the discount badges shown on your product cards. To enable
+                    the badge, set <code>"enable": true</code>. You can choose
+                    between showing the discount as a percentage (e.g.,
+                    <code>20% off</code>) by setting
+                    <code>"percentage": true</code>, or as an amount saved
+                    (e.g., <code>$10 save</code>) by using
+                    <code>"savePrice": true</code>. Only one of these will
+                    display at a time, and you can control which one gets
+                    priority using <code>"percentage_text"</code> and
+                    <code>"savePrice_text"</code> to customize the ending
+                    text—like <code>"off"</code> or <code>"saved"</code>.
+                    <br /><br />
+                    <strong>Example:</strong>
+                    <div
+                      class="example-container code-block"
+                      bis_skin_checked="1"
+                    >
+                      <pre class="exampleCode">
+[
+  {
+    "productTypeBadge": true,
+    "SaveBadge": {
+      "enable": true,
+      "swap": true,
+      "percentage": true,
+      "savePrice": false,
+      "percentage_text": "off",
+      "savePrice_text": "save"
+    }
+  }
+]</pre
+                      >
+                      <button
+                        class="copy-btn"
+                        onclick="copyWidgetCode()"
+                        style=""
+                      >
+                        📋 Copy
+                      </button>
+                    </div>
+
+                    This will show the badge as <code>20% off</code> on your
+                    product image.
+                  </li>
+                  <li>
+                    <strong>Product Tags Badges Settings:</strong> This section
+                    controls the product tags badges displayed on your product
+                    cards. - To enable the badge, set
+                    <code>"enable": true</code>. If <code>"enable"</code> is set
+                    to <code>false</code>, the badge will not be shown. - You
+                    need to assign specific tags to your products to make these
+                    badges appear. - Define the badge text in the
+                    <code>"tags"</code> field, where each tag has a custom badge
+                    message. - For example, you can add a tag like
+                    <code>"toys": "30 off at here"</code> to display a "30 off
+                    at here" badge for products tagged as "toys."
+
+                    <br /><br />
+                    <strong>Example:</strong>
+                    <div
+                      class="example-container code-block"
+                      bis_skin_checked="1"
+                    >
+                      <pre class="exampleCode">
+[
+  {
+    "productTagsBadges": {
+      "enable": true,
+      "tags": {
+        "toys": "30 off at here"
+      }
+    }
+  },
+  {
+    "productTagsBadges": {
+      "enable": true,
+      "tags": {
+        "wiser": "test-new"
+      }
+    }
+  }
+]</pre
+                      >
+                      <button
+                        class="copy-btn"
+                        onclick="copyWidgetCode()"
+                        style=""
+                      >
+                        📋 Copy
+                      </button>
+                    </div>
+
+                    - This will show the badge <code>30 off at here</code> for
+                    products tagged with <code>"toys"</code> and
+                    <code>test-new</code> for products tagged with
+                    <code>"wiser"</code>. - Make sure to assign the tags like
+                    <code>"toys"</code> and <code>"wiser"</code> to the relevant
+                    products in your store for the badges to appear.
+                  </li>
+                  <li>
+                    <strong>Badge Settings:</strong> To enable all badges, use
+                    the following code: <br /><br />
+                    <strong>Example:</strong>
+                    <div
+                      class="example-container code-block"
+                      bis_skin_checked="1"
+                    >
+                      <pre class="exampleCode">
+[
+  {
+    "productTypeBadge": true,
+    "SaveBadge": {
+      "enable": true,
+      "swap": true,
+      "percentage": true,
+      "savePrice": false,
+      "percentage_text": "off",
+      "savePrice_text": "save"
+    },
+    "productTagsBadges": {
+      "enable": true,
+      "tags": {
+        "toys": "30% off at here"
+      }
+    }
+  },
+  {
+    "productTagsBadges": {
+      "enable": true,
+      "tags": {
+        "wiser": "test-new"
+      }
+    }
+  }
+]</pre
+                      >
+                      <button
+                        class="copy-btn"
+                        onclick="copyWidgetCode()"
+                        style=""
+                      >
+                        📋 Copy
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+                <div class="example-container code-block" bis_skin_checked="1">
+                  <pre class="exampleCode">
+&lt;span class="badge-outline top-left"&gt;Limited Edition&lt;/span&gt;</pre
+                  >
+                  <a
+                    href="#"
+                    id="goToExamples"
+                    data-target="Badge"
+                    class="Badge-example-link"
+                    >Click here and check example</a
+                  >
+                </div>
+              </div>
+
+              <!-- files for Badge -->
+              <div class="evm-tab-content tab-content-Badge" id="files-Badge">
+                <h2>Product Card Implementation</h2>
+                <div class="code-block">
+                  <pre><code>// Product card implementation code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- test cases for Badge -->
+              <div
+                class="evm-tab-content tab-content-Badge"
+                id="test-cases-Badge"
+              >
+                <h2>Product Card Test Cases</h2>
+                <div class="test-cases">
+                  <div class="test-case">
+                    <h3>Test Case 1</h3>
+                    <p>Description of test case 1</p>
+                    <div class="test-status success">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Passed</span>
+                    </div>
+                  </div>
+                  <div class="test-case">
+                    <h3>Test Case 2</h3>
+                    <p>Description of test case 2</p>
+                    <div class="test-status success">
+                      <i class="fas fa-clock"></i>
+                      <span>success</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- example for Badge -->
+              <div
+                class="evm-tab-content tab-content-Badge"
+                id="examples-Badge"
+                bis_skin_checked="1"
+              >
+                <h2 style="font-size: 24px; margin-bottom: 1rem">
+                  🏷️ Badge Position – Visual Guide
+                </h2>
+
+                <p style="font-size: 15px; margin-bottom: 1.5rem">
+                  This guide shows how the
+                  <strong>badge_position</strong> setting affects where the
+                  badge appears on the product image. Options include:
+                  <strong>Top Left</strong>, <strong>Top Right</strong>,
+                  <strong>Bottom Left</strong>, and
+                  <strong>Bottom Right</strong>.
+                </p>
+
+                <!-- Image Preview -->
+                <div
+                  style="text-align: center; margin-bottom: 20px"
+                  bis_skin_checked="1"
+                >
+                  <a
+                    href="https://cdn.shopify.com/s/files/1/0522/5932/4060/files/A_digital_photograph_displays_a_single_low-top_whi.png?v=1744789500"
+                    target="_blank"
+                    bis_size='{"x":791,"y":6465,"w":591,"h":21,"abs_x":791,"abs_y":6465}'
+                  >
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0522/5932/4060/files/ChatGPT_Image_Apr_16_2025_03_53_29_PM.png?v=1744799202"
+                      alt="Badge Position Guide"
+                      style="
+                        max-width: 60%;
+                        height: auto;
+                        border: 1px solid #e1dfe7;
+                        border-radius: 10px;
+                        box-shadow: 0 2px 4px rgba(65, 29, 87, 0.2);
+                        transition: box-shadow 0.3s ease;
+                      "
+                      bis_size='{"x":791,"y":5890,"w":591,"h":591,"abs_x":791,"abs_y":5890}'
+                      bis_id="bn_6u09xdiwo94vaza6xcr3nm"
+                    />
+                  </a>
+                </div>
+
+                <!-- Use Case Grid -->
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 1rem;
+                  "
+                  bis_skin_checked="1"
+                >
+                  <div bis_skin_checked="1">
+                    <strong>↖️ Top Left:</strong> Badge appears at the top-left
+                    corner of the image.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>↗️ Top Right:</strong> Badge appears at the
+                    top-right corner of the image.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>↙️ Bottom Left:</strong> Badge appears at the
+                    bottom-left corner of the image.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>↘️ Bottom Right:</strong> Badge appears at the
+                    bottom-right corner of the image.
+                  </div>
+                </div>
+              </div>
+              <!-- notes for Badge -->
+              <div class="evm-tab-content tab-content-Badge" id="notes-Badge">
+                <h2>Additional Notes</h2>
+                <p>
+                  Here you can add any miscellaneous notes or developer tips
+                  related to the product card implementation.
+                </p>
+              </div>
+            </div>
+
+            <!-- wishlist Section -->
+            <div class="evm_wishlist-setting_outer evm_ws_outer" id="Wishlist">
+              <div class="evm_wishlist-settings">
+                <h1>Wishlist Settings</h1>
+                <div
+                  class="user-guide"
+                  id="wishlist-settings-guide"
+                  bis_skin_checked="1"
+                >
+                  <ul>
+                    <li>
+                      <strong>Position:</strong> Choose where the wishlist
+                      appears on the product image, inside card, such as
+                      <code>Top Right</code>, <code>Top Left</code>,
+                      <code>Bottom Left</code>, or <code>Bottom Right</code>,
+                      <code>Inside card</code>.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-nav">
+                <button class="tab-btn active" data-tab="overview-wishlist">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="files-wishlist">Files</button>
+                <button class="tab-btn" data-tab="test-cases-wishlist">
+                  Test Cases
+                </button>
+                <button class="tab-btn" data-tab="examples-Wishlist">
+                  Examples
+                </button>
+                <button class="tab-btn" data-tab="notes-wishlist">Notes</button>
+              </div>
+              <!-- overview for wishlist -->
+              <div
+                class="evm-tab-content tab-content-Wishlist active"
+                id="overview-wishlist"
+                bis_skin_checked="1"
+              >
+                <h3>💖 Wishlist Settings – Overview</h3>
+                <ul>
+                  <li>
+                    <strong>Position:</strong> Choose where the wishlist icon
+                    appears—either on top of the product image or inside the
+                    product card. Common placement options include
+                    <code>Top Right</code>, <code>Top Left</code>,
+                    <code>Bottom Left</code>, <code>Bottom Right</code>, or
+                    <code>Inside Card</code>. The position helps ensure it fits
+                    well with your design layout.
+                  </li>
+                  <li>
+                    <strong>Icon Style:</strong> Customize the look using
+                    pre-defined icon classes or upload your own SVG/icon if
+                    supported by your theme.
+                  </li>
+                  <li>
+                    <strong>Interaction:</strong> Clicking the icon typically
+                    adds the product to the wishlist. Some themes also support
+                    hover effects or counters.
+                  </li>
+                </ul>
+                <div class="example-container code-block" bis_skin_checked="1">
+                  <pre class="exampleCode">
+&lt;div class="wishlist-icon top-right"&gt;❤️&lt;/div&gt;</pre
+                  >
+                  <a
+                    href="#"
+                    id="goToExamples"
+                    data-target="Wishlist"
+                    class="Wishlist-example-link"
+                    >Click here and check example</a
+                  >
+                </div>
+              </div>
+              <!-- files for wishlist -->
+              <div
+                class="evm-tab-content tab-content-Wishlist"
+                id="files-wishlist"
+              >
+                <h2>Product Card Implementation</h2>
+                <div class="code-block">
+                  <pre><code>// Product card implementation code goes here</code></pre>
+                  <button class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <!-- test cases for wishlist -->
+              <div
+                class="evm-tab-content tab-content-Wishlist"
+                id="test-cases-wishlist"
+              >
+                <h2>Product Card Test Cases</h2>
+                <div class="test-cases">
+                  <div class="test-case">
+                    <h3>Test Case 1</h3>
+                    <p>Description of test case 1</p>
+                    <div class="test-status success">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Passed</span>
+                    </div>
+                  </div>
+                  <div class="test-case">
+                    <h3>Test Case 2</h3>
+                    <p>Description of test case 2</p>
+                    <div class="test-status success">
+                      <i class="fas fa-clock"></i>
+                      <span>success</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- example for wishlist -->
+              <div
+                class="evm-tab-content tab-content-Wishlist"
+                id="examples-Wishlist"
+                bis_skin_checked="1"
+              >
+                <h2 style="font-size: 24px; margin-bottom: 1rem">
+                  ❤️ Wishlist Position – Visual Guide
+                </h2>
+
+                <p style="font-size: 15px; margin-bottom: 1.5rem">
+                  This guide shows how the
+                  <strong>wishlist_position</strong> setting affects where the
+                  wishlist icon appears on the product image or inside the card.
+                  Options include: <strong>Top Left</strong>,
+                  <strong>Top Right</strong>, <strong>Bottom Left</strong>,
+                  <strong>Bottom Right</strong>, and
+                  <strong>Inside Card</strong>.
+                </p>
+
+                <!-- Image Preview -->
+                <div
+                  style="text-align: center; margin-bottom: 20px"
+                  bis_skin_checked="1"
+                >
+                  <a
+                    href="https://cdn.shopify.com/s/files/1/0522/5932/4060/files/A_digital_photograph_displays_a_single_low-top_whi.png?v=1744789500"
+                    target="_blank"
+                    bis_size='{"x":791,"y":7611,"w":591,"h":21,"abs_x":791,"abs_y":7611}'
+                  >
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0522/5932/4060/files/ChatGPT_Image_Apr_16_2025_04_15_03_PM.png?v=1744800343"
+                      alt="Wishlist Position Guide"
+                      style="
+                        max-width: 60%;
+                        height: auto;
+                        border: 1px solid #e1dfe7;
+                        border-radius: 10px;
+                        box-shadow: 0 2px 4px rgba(65, 29, 87, 0.2);
+                        transition: box-shadow 0.3s ease;
+                      "
+                      bis_size='{"x":791,"y":7037,"w":591,"h":591,"abs_x":791,"abs_y":7037}'
+                      bis_id="bn_pprk48a48hnfjg2994k69s"
+                    />
+                  </a>
+                </div>
+
+                <!-- Use Case Grid -->
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 1rem;
+                  "
+                  bis_skin_checked="1"
+                >
+                  <div bis_skin_checked="1">
+                    <strong>↖️ Top Left:</strong> Wishlist icon appears at the
+                    top-left corner of the product image.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>↗️ Top Right:</strong> Wishlist icon appears at the
+                    top-right corner of the product image.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>↙️ Bottom Left:</strong> Wishlist icon appears at
+                    the bottom-left corner of the product image.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>↘️ Bottom Right:</strong> Wishlist icon appears at
+                    the bottom-right corner of the product image.
+                  </div>
+                  <div bis_skin_checked="1">
+                    <strong>🧾 Inside Card:</strong> Wishlist icon is positioned
+                    inside the product card layout, usually near the title or
+                    button.
+                  </div>
+                </div>
+              </div>
+              <!-- notes for wishlist -->
+              <div
+                class="evm-tab-content tab-content-Wishlist"
+                id="notes-wishlist"
+              >
+                <h3>Additional Notes</h3>
+                <p>
+                  Here you can add any miscellaneous notes or developer tips
+                  related to the product card implementation.
+                </p>
+              </div>
+            </div>
+            <!-- Drawer Section -->
+            <div class="evm_Drawer-setting_outer evm_ws_outer" id="Drawer">
+              <div class="evm_Drawer-settings">
+                <h2>🛒 Wiser Drawer Cart Setup</h2>
+                <div class="user-guide">
+                  <ul>
+                    <li>
+                      <strong>Feature Access:</strong> The Drawer Cart is only
+                      fully available to users with <strong>Plan 7</strong>.
+                    </li>
+                    <li>
+                      <strong>Plan 7 Users:</strong>
+                      <ul>
+                        <li>
+                          Step 1: Enable the <code>App Embed Block</code> from
+                          Theme Settings.
+                        </li>
+                        <li>
+                          Step 2: Go to <code>Admin Settings</code> and turn on
+                          the <strong>Drawer Cart</strong>.
+                        </li>
+                        <li>
+                          Step 3: Go to <code>Admin Settings</code> and save on
+                          the <strong>Custmize setting</strong>.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>Other Users:</strong>
+                      <ul>
+                        <li>
+                          The drawer is not available in your current plan.
+                        </li>
+                        <li>
+                          However, you can go to
+                          <code>Developer Settings</code> and manually enable it
+                          for testing.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- db function Section -->
+            <div
+              class="evm_db-func-setting_outer evm_ws_outer active"
+              id="Db-function"
+            >
+              <div class="evm_Db-function-settings">
+                <h2>🛒 Wiser DB Function</h2>
+                <div class="user-guide">
+                  <ul>
+                    <li>
+                      <strong>DB Function:</strong> You can create functions
+                      directly in the DB function settings for seamless
+                      integration with the drawer cart. This function connects
+                      to the database, and please ensure that single quotation
+                      marks are always used.
+                    </li>
+                    <li>
+                      <strong>HTML:</strong> You can add all widget div elements
+                      in this field to customize the content and structure of
+                      the drawer cart.
+                    </li>
+                  </ul>
+                  <div
+                    class="example-container code-block"
+                    bis_skin_checked="1"
+                  >
+                    <pre class="exampleCode">
+<code>
+function wiserAddedToCart() {
+  // Add your logic here
+}
+
+wiserAddedToCart();
+</code>
+</pre>
+                    <button class="copy-btn" onclick="copyWidgetCode()">
+                      📋 Copy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slider Settings Section -->
+        <div class="section-content" id="slider-settings">
+          <div class="slider-horizontal-tab">
+            <div class="tab-nav">
+              <a href="#" class="tab-btn active" data-tab="Pagination"
+                >Pagination</a
+              >
+              <a href="#" class="tab-btn" data-tab="Autplay"> Autplay</a>
+              <a href="#" class="tab-btn" data-tab="Navigation">Navigation</a>
+              <a href="#" class="tab-btn" data-tab="Scrollbar">Scrollbar</a>
+              <a href="#" class="tab-btn" data-tab="Behavior"
+                >Slider Behavior</a
+              >
+            </div>
+            <div
+              class="Pagination-setting_outer evm_ws_outer"
+              id="evm-Pagination"
+            >
+              <div class="Pagination-settings">
+                <h2>Pagination</h2>
+                <div
+                  class="Pagination-user-guide"
+                  id="Pagination-main-min-heading"
+                >
+                  <ul>
+                    <li>
+                      <strong>Enable Pagination:</strong> Turn this setting on
+                      to display pagination controls (like dots or numbers)
+                      below your slider. This helps users know which slide they
+                      are viewing.
+                    </li>
+                    <li>
+                      <strong>Clickable:</strong> When enabled, users can click
+                      the pagination bullets to jump directly to a specific
+                      slide. If disabled, the bullets are only for display.
+                    </li>
+                    <li>
+                      <strong>Dynamic Bullets:</strong> This option shows a
+                      smaller set of bullets centered around the active slide,
+                      which is helpful when there are many slides. It makes the
+                      pagination look cleaner.
+                    </li>
+                    <li>
+                      <strong>Pagination Type Dropdown:</strong> Choose the
+                      style of pagination from this dropdown. Options usually
+                      include: <code>bullets</code> (small dots),
+                      <code>fraction</code> (e.g., 2/5),
+                      <code>progressbar</code> (a sliding bar), or
+                      <code>none</code>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="Autplay-setting_outer evm_ws_outer" id="evm-Autplay">
+              <div class="Pagination-settings">
+                <h2>Autoplay</h2>
+                <div
+                  class="Pagination-user-guide"
+                  id="Pagination-main-min-heading"
+                >
+                  <div
+                    class="Autoplay-user-guide"
+                    id="Autoplay-main-min-heading"
+                  >
+                    <p>
+                      <strong>Enable Autoplay:</strong> Turn this setting on to
+                      make the slider automatically switch slides without user
+                      interaction.
+                    </p>
+                    <p>
+                      <strong>Autoplay Time:</strong> Set the delay between each
+                      slide change. For example, <code>2000</code> means a
+                      2-second delay between slides.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="Navigation-setting_outer evm_ws_outer"
+              id="evm-Navigation"
+            >
+              <div class="Navigation-settings">
+                <h2>Navigation</h2>
+                <div class="user-guide" id="Navigation-main-min-heading">
+                  <ul>
+                    <li>
+                      <strong>Enable Navigation:</strong> Turn this setting on
+                      to show previous/next arrows for manually navigating
+                      through the slides.
+                    </li>
+                    <li>
+                      <strong>Arrow Width (in px):</strong> Set the width of the
+                      navigation arrows. Example: <code>37px</code> for a
+                      standard arrow size.
+                    </li>
+                    <li>
+                      <strong>Arrow Height (in px):</strong> Set the height of
+                      the navigation arrows to match your design. Example:
+                      <code>37px</code>.
+                    </li>
+                    <li>
+                      <strong>Arrow Border Radius (in %):</strong> Adjust the
+                      corner roundness of the arrows. Example:
+                      <code>30%</code> gives a soft rounded arrow button.
+                    </li>
+                    <li>
+                      <strong>Add Custom Arrow HTML/SVG:</strong> You can paste
+                      your own HTML or SVG code to fully customize the
+                      appearance of the arrows. This is useful if your theme or
+                      brand has unique arrow styles.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="Scrollbar-setting_outer evm_ws_outer"
+              id="evm-Scrollbar"
+            >
+              <div class="Scrollbar-settings">
+                <h2>Scrollbar</h2>
+                <div class="user-guide" id="Scrollbar-main-min-heading">
+                  <ul>
+                    <li>
+                      <strong>Enable Scrollbar:</strong> Turn this setting on to
+                      display a horizontal scrollbar below the slider, allowing
+                      manual slide navigation.
+                    </li>
+                    <li>
+                      <strong>Show on Hover:</strong> Enable this option to make
+                      the scrollbar visible only when the user hovers over the
+                      slider area. This helps keep the UI clean while still
+                      offering interactive control.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="Behavior-setting_outer evm_ws_outer" id="evm-Behavior">
+              <div class="Behavior-settings">
+                <h2>Slider Behavior</h2>
+                <div class="user-guide" id="Behavior-main-min-heading">
+                  <ul>
+                    <li>
+                      <strong>Enable Direction (Enable Dir):</strong> Choose the
+                      scroll direction: <code>ltr</code> (left-to-right) or
+                      <code>rtl</code> (right-to-left) depending on layout.
+                    </li>
+                    <li>
+                      <strong>Loop:</strong> Makes the slider repeat endlessly.
+                      After reaching the last slide, it loops back to the first.
+                    </li>
+                    <li>
+                      <strong>Centered Slides:</strong> Keeps the active slide
+                      in the center. This is ideal for partial slides on the
+                      edges.
+                    </li>
+                    <li>
+                      <strong>CSS Mode:</strong> Enables native browser
+                      scrolling with snap behavior. Useful for simple, fast
+                      sliders.
+                    </li>
+                    <li>
+                      <strong>Resize Observer:</strong> Automatically adjusts
+                      the slider when its container or content changes size.
+                    </li>
+                    <li>
+                      <strong>Space Between (in px):</strong> Defines the
+                      horizontal gap between slider cards. For example,
+                      <code>10</code> adds a 10px space between each card.
+                    </li>
+                    <li>
+                      <strong>Add Text:</strong> This field can also be used to
+                      insert custom JavaScript (like Swiper.js settings) for
+                      responsive behavior. For example, you can control how many
+                      slides are visible based on screen width using
+                      <code>slidesPerView</code> with fractional values. This
+                      makes part of the next slide visible, improving the visual
+                      flow.
+
+                      <div class="example-container code-block">
+                        <pre class="exampleCode">
+{
+  spaceBetween: 10,
+  breakpoints: {
+    640: {
+      slidesPerView: 1.5
+    },
+    1024: {
+      slidesPerView: 2.5
+    }
+  }
+}
+    </pre
+                        >
+                        <button class="copy-btn" onclick="copyWidgetCode()">
+                          📋 Copy
+                        </button>
+                      </div>
+
+                      This approach lets you build a responsive slider directly
+                      from the Add Text field, without needing extra script tags
+                      elsewhere.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cart Drawer Settings Section -->
+        <div class="section-content" id="cart-drawer">
+          <div class="drawer-settings" id="Drawer-settings">
+            <div class="horizontal-tabs">
+              <div class="Drawer-setting_outer evm_ws_outer" id="evm-Drawer">
+                <div class="DrawerCart-settings">
+                  <h2>🛒 Wiser Drawer Cart Setup</h2>
+                  <div class="user-guide">
+                    <ul>
+                      <li>
+                        <strong>Feature Access:</strong> The Drawer Cart is only
+                        fully available to users with <strong>Plan 7</strong>.
+                      </li>
+                      <li>
+                        <strong>Plan 7 Users:</strong>
+                        <ul>
+                          <li>
+                            Step 1: Enable the <code>App Embed Block</code> from
+                            Theme Settings.
+                          </li>
+                          <li>
+                            Step 2: Go to <code>Admin Settings</code> and turn
+                            on the <strong>Drawer Cart</strong>.
+                          </li>
+                          <li>
+                            Step 3: Go to <code>Admin Settings</code> and save
+                            on the <strong>Custmize setting</strong>.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <strong>Other Users:</strong>
+                        <ul>
+                          <li>
+                            The drawer is not available in your current plan.
+                          </li>
+                          <li>
+                            However, you can go to
+                            <code>Developer Settings</code> and manually enable
+                            it.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- wiser drawer Guide -->
+              <div
+                class="Drawer-setting_outer evm_ws_outer"
+                id="evm-Drawer-div"
+              >
+                <!-- Integration Guide: Default Drawer with Wiser Widgets -->
+                <div class="DrawerWidget-settings">
+                  <h2>🛒 Wiser Drawer Widget Integration Guide</h2>
+                  <div class="user-guide">
+                    <ul>
+                      <li>
+                        <strong>Wrapper Container:</strong>
+                        To display Wiser widgets in the default drawer, add the
+                        following div inside the drawer container:
+                        <pre><code>&lt;div class='ws-drawer-all'&gt;...&lt;/div&gt;</code></pre>
+                      </li>
+
+                      <li>
+                        <strong>Wrapper Container:</strong>
+                        Wrap all widget <code>&lt;div&gt;</code>s inside
+                        <code>&lt;div class='ws-drawer-all'&gt;</code> to apply
+                        drawer styling.
+                      </li>
+                      <li>
+                        <strong>Widget Class:</strong>
+                        Each widget must have <code>ws_crt_wgt</code> class.
+                      </li>
+                      <li>
+                        <strong>Drawer Visibility:</strong>
+                        Add <code>data-cart-view='true'</code> to show the
+                        widget inside cart drawer.
+                      </li>
+                      <li>
+                        <strong>Widget Type:</strong>
+                        Use <code>data-wiser-widget</code> to define type like
+                        <code>new_arrival</code>, <code>top_selling</code>, etc.
+                      </li>
+                      <li>
+                        <strong>Product Count:</strong>
+                        Use <code>data-no-of-products</code> to define total
+                        number of products shown.
+                      </li>
+                      <li>
+                        <strong>Products per Row:</strong>
+                        Use <code>data-no-products-pre-row</code> to show 1, 2,
+                        or more products per row.
+                      </li>
+                      <li>
+                        <strong>Slider Layout:</strong>
+                        To enable horizontal scroll, add
+                        <code>data-product-view='slider'</code>.
+                      </li>
+                      <li>
+                        <strong>Arrow Position:</strong>
+                        Use <code>data-arrow-position</code> for arrow location.
+                        Values include <code>ws-arrow-top-right</code>,
+                        <code>ws-arrow-bottom-center</code>.
+                      </li>
+                      <li>
+                        <strong>Enable Widget:</strong>
+                        Add <code>data-enable-feature='true'</code> to activate
+                        the widget.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Example Divs -->
+                <div class="example-container code-block" bis_skin_checked="1">
+                  <pre class="exampleCode">
+&lt;div class='ws-drawer-all'&gt;
+    &lt;div class='evm-new-arrivals-product ws_crt_wgt' data-wiser-page='cartdrawer' data-wiser-widget='new_arrival' data-cart-view='true' 
+         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right'&gt;
+    &lt;/div&gt;
+
+    &lt;div class='evm-related-product ws_crt_wgt' data-wiser-page='cartdrawer' data-wiser-widget='related_products' data-cart-view='true' 
+         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right'&gt;
+    &lt;/div&gt;
+
+    &lt;div class='evm-recommended-products ws_crt_wgt' data-wiser-page='cartdrawer' data-wiser-widget='recommended_products' data-cart-view='true' 
+         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right'&gt;
+    &lt;/div&gt;
+
+    &lt;div class='evm-most-popular-products ws_crt_wgt' data-wiser-page='cartdrawer' data-wiser-widget='top_selling' data-cart-view='true' 
+         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right'&gt;
+    &lt;/div&gt;
+
+    &lt;div class='trending-products ws_crt_wgt' data-wiser-page='cartdrawer' data-wiser-widget='trending_products' data-cart-view='true' 
+         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right'&gt;
+    &lt;/div&gt;
+
+    &lt;div class='evm-featured-collections-product ws_crt_wgt' data-wiser-page='cartdrawer' data-wiser-widget='featured_collections' data-cart-view='true' 
+         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right'&gt;
+    &lt;/div&gt;
+
+    &lt;div class='recently-viewed ws_crt_wgt' data-wiser-page='cartdrawer' data-wiser-widget='recently_products' data-cart-view='true' 
+         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right'&gt;
+    &lt;/div&gt;
+
+    &lt;div class='evm-related-viewed-browsing ws_crt_wgt' data-wiser-page='cartdrawer' data-wiser-widget='recently_related_products' data-cart-view='true' 
+         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right'&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    </pre
+                  >
+                  <button class="copy-btn" onclick="copyWidgetCode()">
+                    📋 Copy
+                  </button>
+                </div>
+                <div class="user-guide">
+                  <ul>
+                    <li>
+                      <strong>Responsive Slider:</strong>
+                      For custom responsiveness like <code>1.5</code> or
+                      <code>2.5</code> products, use
+                      <code>data-slider-settings</code> and wrap the JSON in
+                      <strong>single quotes</strong>.
+                      <p>
+                        Example of custom slider settings for 1.5 or 2.5
+                        products, enabling dots, navigation, and adjusting space
+                        between slides:
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="example-container code-block" bis_skin_checked="1">
+                  <pre class="exampleCode">
+&lt;div class='ws-drawer-all'&gt;
+    &lt;div class='evm-new-arrivals-product ws_crt_wgt' data-wiser-page='cartdrawer' data-wiser-widget='new_arrival' data-cart-view='true' 
+         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right' 
+         data-slider-settings=
+    '{'loop':false,'breakpoints':{'0':{'slidesPerView':1,'spaceBetween':10},'300':{'slidesPerView':1.1,'spaceBetween':15},'768':{'slidesPerView':1.5,'spaceBetween':15},
+    '1024':{'slidesPerView':8,'spaceBetween':10}}}'&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </pre
+                  >
+                  <button class="copy-btn" onclick="copyWidgetCode()">
+                    📋 Copy
+                  </button>
+                </div>
+              </div>
+              <div
+                class="Drawer-setting_outer evm_ws_outer"
+                id="evm-QuickViewSwitch-div"
+              >
+                <!-- 🔧 Integration Guide: Cart Drawer Quick View Mode Settings -->
+                <div class="DrawerWidget-settings">
+                  <h2>🛍️ Cart Drawer Quick View Mode Settings</h2>
+
+                  <!-- 📘 Admin Panel User Guide -->
+                  <div class="user-guide">
+                    <ul>
+                      <li>
+                        <strong>Setting Toggle Class:</strong><br />
+                        To control Quick View layout, search for the class
+                        <code>.form-group.cd-enbl-dsbl-text</code> in the drawer
+                        settings inside the admin panel. This is where the
+                        toggle setting exists. It contains a
+                        <code>&lt;select&gt;</code> element with the name
+                        <code>cart_enbl_dsbl</code>. Based on its selected
+                        value, the layout changes as follows:
+                        <ul>
+                          <li>
+                            <code>0</code> →
+                            <strong>Quick View Outside Drawer:</strong> A global
+                            modal or redirect popup appears (like a standard
+                            modal window).
+                          </li>
+                          <li>
+                            <code>1</code> →
+                            <strong>Quick View Inside Drawer:</strong> The
+                            product variant popup loads within a drawer
+                            container using
+                            <code>#CartVariantPopupdrawer</code>, sliding up
+                            from the bottom.
+                          </li>
+                        </ul>
+                        This setup allows dynamic switching between
+                        inside/outside popup views without code changes — just
+                        change the dropdown value in admin.
+                      </li>
+
+                      <li>
+                        <strong>Drawer Not Present?</strong><br />
+                        If your theme does not use a cart drawer, the layout
+                        still works. Both modes (outside or inside) are
+                        supported independently.
+                      </li>
+
+                      <li>
+                        <strong>Inside Drawer Container:</strong><br />
+                        Make sure this empty container is present in your
+                        layout. It is used for injecting the quick view when
+                        mode = <code>1</code>: <br /><code></code>
+                      </li>
+
+                      <li>
+                        <strong>Outside Drawer Container:</strong><br />
+                        For external/global popup mode (mode = <code>0</code>),
+                        wrap your modal layout inside this: <br /><code></code>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- main widgets Settings Section -->
+        <div class="section-content" id="main-widgets">
+          <div class="main-widgets-settings" id="main-widgets-settings">
+            <div class="horizontal-tabs">
+              <div
+                class="main-widgets-setting_outer evm_ws_outer"
+                id="evm-main-widgets"
+              >
+                <div class="main-widgets-settings">
+                  <h2>🛒 Wiser Main Widgets - Step-by-Step Guide</h2>
+
+                  <div class="user-guide" id="main-widgets-guide">
+                    <ul>
+                      <!-- Step 1 -->
+                      <li>
+                        <strong>What are Wiser Widgets?</strong><br />
+                        Wiser widgets are used to display product
+                        recommendations like New Arrivals, Recently Viewed,
+                        etc., on your storefront in Grid or Slider format.
+                      </li>
+
+                      <!-- Step 2 -->
+                      <li>
+                        <strong>How to Add a Widget to Your Page:</strong><br />
+                        Copy and paste the following HTML where you want to show
+                        the widget (homepage, product page, collection page,
+                        etc.):
+                        <div class="example-container code-block">
+                          <pre class="exampleCode">
+&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
+  data-wiser-widget="new_arrival"
+  data-no-of-products="5"
+  data-enable-feature="true"
+  data-no-products-pre-row="1"
+  data-product-view="slider"
+  data-arrow-position="ws-arrow-top-right"&gt;&lt;/div&gt;</pre
+                          >
+                          <button class="copy-btn" onclick="copyWidgetCode()">
+                            📋 Copy
+                          </button>
+                        </div>
+                      </li>
+
+                      <!-- Step 3 -->
+                      <li>
+                        <strong>Important Class:</strong><br />
+                        Make sure you always include
+                        <code>ws_inr_main_wgt</code> in your widget. This is
+                        required for it to work correctly.
+                      </li>
+
+                      <!-- Step 4 -->
+                      <li>
+                        <strong>Switch Between Slider and Grid View:</strong
+                        ><br />
+                        <ul>
+                          <li>
+                            To show products in a slider, use
+                            <code>data-product-view="slider"</code>.
+                          </li>
+                          <li>
+                            To switch to grid view, change it to
+                            <code>data-product-view="grid"</code>.
+                          </li>
+                          <li>
+                            After switching the view type, if arrows do not
+                            appear, go to <strong>Custmize Widgets</strong> and
+                            click <strong>Save</strong> to update your settings.
+                          </li>
+                          <li>
+                            Wait for 1 minute, then refresh the page to see the
+                            changes.
+                          </li>
+                        </ul>
+                      </li>
+
+                      <!-- Step 5 - Grid Example -->
+                      <li>
+                        <strong>Example – Grid View:</strong><br />
+                        Use this code if you want products shown in a grid
+                        layout:
+                        <div class="example-container code-block">
+                          <pre class="exampleCode">
+&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
+  data-wiser-widget="new_arrival"
+  data-no-of-products="6"
+  data-enable-feature="true"
+  data-no-products-pre-row="3"
+  data-product-view="grid"&gt;&lt;/div&gt;</pre
+                          >
+                          <button class="copy-btn" onclick="copyWidgetCode()">
+                            📋 Copy
+                          </button>
+                        </div>
+                        <p><strong>Details:</strong></p>
+                        <ul>
+                          <li>
+                            <code>data-no-of-products="6"</code> → Total 6
+                            products shown
+                          </li>
+                          <li>
+                            <code>data-no-products-pre-row="3"</code> → 3
+                            products per row
+                          </li>
+                          <li>
+                            <code>data-product-view="grid"</code> → Enables grid
+                            layout
+                          </li>
+                        </ul>
+                      </li>
+
+                      <!-- Step 6 - Slider with Responsive Example -->
+                      <li>
+                        <strong
+                          >Example – Slider View with Responsive
+                          Settings:</strong
+                        ><br />
+                        Use this for full control on mobile, tablet, desktop
+                        layouts:
+                        <div class="example-container code-block">
+                          <pre class="exampleCode">
+&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
+  data-wiser-widget="new_arrival"
+  data-no-of-products="10"
+  data-enable-feature="true"
+  data-no-products-pre-row="3"
+  data-product-view="slider"
+  data-arrow-position="ws-arrow-top-right"
+  data-slider-settings='{
+    "loop": false,
+    "breakpoints": {
+      "0": { "slidesPerView": 1, "spaceBetween": 10 },
+      "300": { "slidesPerView": 1.1, "spaceBetween": 15 },
+      "768": { "slidesPerView": 1.5, "spaceBetween": 15 },
+      "1024": { "slidesPerView": 8, "spaceBetween": 10 }
+    }
+  }'&gt;&lt;/div&gt;</pre
+                          >
+                          <button class="copy-btn" onclick="copyWidgetCode()">
+                            📋 Copy
+                          </button>
+                        </div>
+                      </li>
+
+                      <!-- Step 7 -->
+
+                      <li>
+                        <strong>Tips:</strong><br />
+                        ✔ Always include
+                        <code>ws_inr_main_wgt</code> class.<br />
+                        ✔ After saving in admin, wait a minute and refresh your
+                        live store.<br />
+                        ✔ Combine multiple widgets as needed (e.g., Recently
+                        Viewed + New Arrivals).
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- wiser drawer Guide -->
+            </div>
+          </div>
+        </div>
+        <!-- note wiser developer Settings -->
+        <div class="section-content" id="Important-Note">
+          <div class="notes-settings" id="Note-settings">
+            <div class="horizontal-tabs">
+              <div class="Note-setting_outer evm_ws_outer" id="evm-Note">
+                <div class="Note-settings">
+                  <h2>⚠️ Important Developer Notes</h2>
+                  <div class="user-guide" id="Note-guide">
+                    <ul>
+                      <li>
+                        Always close all opened HTML tags properly. Unclosed
+                        tags may break the layout or functionality.
+                      </li>
+                      <li>
+                        Use <code>single quotes ' '</code> inside HTML attribute
+                        values within JSON or embedded HTML to avoid breaking
+                        the code.
+                      </li>
+                      <li>
+                        Avoid using <code>double quotes " "</code> within the
+                        value of HTML attributes when injecting JSON or markup.
+                        This causes conflicts and app errors.
+                      </li>
+                      <li>
+                        Example:
+                        <pre><code>&lt;div data-slider-settings='{'loop': true, 'spaceBetween': 10}'&gt;&lt;/div&gt;</code></pre>
+                      </li>
+                      <li>
+                        For inline styles, class names, or tag references—stick
+                        to your theme's existing styles where possible to avoid
+                        conflicts.
+                      </li>
+                      <li>
+                        Always test changes on a staging theme before publishing
+                        to live.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
