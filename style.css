@@ -503,7 +503,7 @@ h3 {
 /* Enhanced Responsive Design */
 @media (max-width: 1024px) {
   .container {
-    padding: 0 10px;
+    padding: 0px;
   }
 
   .main-nav {
