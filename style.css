@@ -524,6 +524,12 @@ h3 {
   .content-area {
     padding: 20px;
   }
+    .tab-nav,
+  .slider-tab-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 @media (max-width: 768px) {
@@ -532,12 +538,7 @@ h3 {
     gap: 10px;
   }
 
-  .tab-nav,
-  .slider-tab-nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+
 
   .tab-btn {
     flex-shrink: 0;
