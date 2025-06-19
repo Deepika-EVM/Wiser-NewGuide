@@ -2243,33 +2243,56 @@ wiserAddedToCart();
               >
                 <div class="main-widgets-settings">
                   <h2>🛒 Wiser Main Widgets - Step-by-Step Guide</h2>
+                  🛒 Wiser Main Widgets - Step-by-Step Guide
 
-                  <div class="user-guide" id="main-widgets-guide">
-                    <ul>
+                   <ul>
                       <!-- Step 1 -->
                       <li>
-                        <strong>What are Wiser Widgets?</strong><br />
+                        <strong>What are Wiser Widgets?</strong><br>
                         Wiser widgets are used to display product
                         recommendations like New Arrivals, Recently Viewed,
                         etc., on your storefront in Grid or Slider format.
                       </li>
+<li>
+  <strong>How to Add All Wiser Widgets to Your Page:</strong><br>
+  You can show Wiser widgets on any page (homepage, product page, collection page, etc.). Follow these steps depending on the builder you're using:
+
+  <ul>
+    <li><strong>In GemPages:</strong> Use the <em>Custom Code</em> element. Drag it onto the page where you want the widget(s), then paste the code below inside it.</li>
+    <li><strong>In PageFly:</strong> Use the <em>HTML/Liquid</em> element. Drag it onto the page, and paste the code below in the HTML editor panel.</li>
+  </ul>
+
+  <div>
+    <div class="example-container code-block">
+      <pre class="exampleCode">&lt;div class="evm-related-product ws_inr_main_wgt" data-wiser-widget="related_products"&gt;&lt;/div&gt;
+&lt;div class="recently-viewed ws_inr_main_wgt" data-wiser-widget="recently_products"&gt;&lt;/div&gt;
+&lt;div class="evm-recommended-products ws_inr_main_wgt" data-wiser-widget="recommended_products"&gt;&lt;/div&gt;
+&lt;div class="evm-most-popular-products ws_inr_main_wgt" data-wiser-widget="top_selling"&gt;&lt;/div&gt;
+&lt;div class="trending-products ws_inr_main_wgt" data-wiser-widget="trending_products"&gt;&lt;/div&gt;
+&lt;div class="evm-featured-collections-product ws_inr_main_wgt" data-wiser-widget="featured_collections"&gt;&lt;/div&gt;
+&lt;div class="evm-related-viewed-browsing ws_inr_main_wgt" data-wiser-widget="'recently_related_products"&gt;&lt;/div&gt;
+&lt;div class="evm-also-bought-products ws_inr_main_wgt" data-wiser-widget="alsobought"&gt;&lt;/div&gt;</pre>
+
+      <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+    </div>
+  </div>
+</li>
 
                       <!-- Step 2 -->
                       <li>
-                        <strong>How to Add a Widget to Your Page:</strong><br />
+                        <strong>How to Add a Widget to Your Page:</strong><br>
                         Copy and paste the following HTML where you want to show
                         the widget (homepage, product page, collection page,
                         etc.):
                         <div class="example-container code-block">
-                          <pre class="exampleCode">
-&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
+                          <pre class="exampleCode">&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
   data-wiser-widget="new_arrival"
+  data-cart-view="true"
   data-no-of-products="5"
   data-enable-feature="true"
   data-no-products-pre-row="1"
   data-product-view="slider"
-  data-arrow-position="ws-arrow-top-right"&gt;&lt;/div&gt;</pre
-                          >
+  data-arrow-position="ws-arrow-top-right"&gt;&lt;/div&gt;</pre>
                           <button class="copy-btn" onclick="copyWidgetCode()">
                             📋 Copy
                           </button>
@@ -2278,7 +2301,7 @@ wiserAddedToCart();
 
                       <!-- Step 3 -->
                       <li>
-                        <strong>Important Class:</strong><br />
+                        <strong>Important Class:</strong><br>
                         Make sure you always include
                         <code>ws_inr_main_wgt</code> in your widget. This is
                         required for it to work correctly.
@@ -2286,8 +2309,7 @@ wiserAddedToCart();
 
                       <!-- Step 4 -->
                       <li>
-                        <strong>Switch Between Slider and Grid View:</strong
-                        ><br />
+                        <strong>Switch Between Slider and Grid View:</strong><br>
                         <ul>
                           <li>
                             To show products in a slider, use
@@ -2298,31 +2320,26 @@ wiserAddedToCart();
                             <code>data-product-view="grid"</code>.
                           </li>
                           <li>
-                            After switching the view type, if arrows do not
-                            appear, go to <strong>Custmize Widgets</strong> and
-                            click <strong>Save</strong> to update your settings.
+                            After switching view type, go to Wiser Admin →
+                            Widgets → Save your settings.
                           </li>
-                          <li>
-                            Wait for 1 minute, then refresh the page to see the
-                            changes.
-                          </li>
+                          <li>Wait 1 minute and refresh your page.</li>
                         </ul>
                       </li>
 
                       <!-- Step 5 - Grid Example -->
                       <li>
-                        <strong>Example – Grid View:</strong><br />
+                        <strong>Example – Grid View:</strong><br>
                         Use this code if you want products shown in a grid
                         layout:
                         <div class="example-container code-block">
-                          <pre class="exampleCode">
-&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
+                          <pre class="exampleCode">&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
   data-wiser-widget="new_arrival"
+  data-cart-view="true"
   data-no-of-products="6"
   data-enable-feature="true"
   data-no-products-pre-row="3"
-  data-product-view="grid"&gt;&lt;/div&gt;</pre
-                          >
+  data-product-view="grid"&gt;&lt;/div&gt;</pre>
                           <button class="copy-btn" onclick="copyWidgetCode()">
                             📋 Copy
                           </button>
@@ -2346,16 +2363,14 @@ wiserAddedToCart();
 
                       <!-- Step 6 - Slider with Responsive Example -->
                       <li>
-                        <strong
-                          >Example – Slider View with Responsive
-                          Settings:</strong
-                        ><br />
+                        <strong>Example – Slider View with Responsive
+                          Settings:</strong><br>
                         Use this for full control on mobile, tablet, desktop
                         layouts:
                         <div class="example-container code-block">
-                          <pre class="exampleCode">
-&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
+                          <pre class="exampleCode">&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
   data-wiser-widget="new_arrival"
+  data-cart-view="true"
   data-no-of-products="10"
   data-enable-feature="true"
   data-no-products-pre-row="3"
@@ -2369,8 +2384,7 @@ wiserAddedToCart();
       "768": { "slidesPerView": 1.5, "spaceBetween": 15 },
       "1024": { "slidesPerView": 8, "spaceBetween": 10 }
     }
-  }'&gt;&lt;/div&gt;</pre
-                          >
+  }'&gt;&lt;/div&gt;</pre>
                           <button class="copy-btn" onclick="copyWidgetCode()">
                             📋 Copy
                           </button>
@@ -2380,11 +2394,11 @@ wiserAddedToCart();
                       <!-- Step 7 -->
 
                       <li>
-                        <strong>Tips:</strong><br />
+                        <strong>Tips:</strong><br>
                         ✔ Always include
-                        <code>ws_inr_main_wgt</code> class.<br />
+                        <code>ws_inr_main_wgt</code> class.<br>
                         ✔ After saving in admin, wait a minute and refresh your
-                        live store.<br />
+                        live store.<br>
                         ✔ Combine multiple widgets as needed (e.g., Recently
                         Viewed + New Arrivals).
                       </li>
