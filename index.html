@@ -2251,50 +2251,91 @@ wiserAddedToCart();
                         etc., on your storefront in Grid or Slider format.
                       </li>
 <li>
-  <strong>How to Add All Wiser Widgets to Your Page:</strong><br>
-  You can show Wiser widgets on any page (homepage, product page, collection page, etc.). Follow these steps depending on the builder you're using:
+  <strong>How to Add All Wiser Widgets to Your Page:</strong><br><br>
+
+  You can display Wiser widgets on any page, including your homepage, product page, collection page, or any custom page.  
+  The method to add widgets depends on the page builder or theme you're using:
 
   <ul>
-    <li><strong>In GemPages:</strong> Use the <em>Custom Code</em> element. Drag it onto the page where you want the widget(s), then paste the code below inside it.</li>
-    <li><strong>In PageFly:</strong> Use the <em>HTML/Liquid</em> element. Drag it onto the page, and paste the code below in the HTML editor panel.</li>
+    <li>
+      <strong>In GemPages:</strong>  
+      Use the <em>Custom Code</em> element. Drag it onto the page where you want the widget to appear, then paste the code below inside it.
+    </li>
+    <li>
+      <strong>In PageFly:</strong>  
+      Use the <em>HTML/Liquid</em> element. Drag it into place, then paste the code below into the HTML editor panel.
+    </li>
+    <li>
+      <strong>For Shopify Online Store 1.0 themes:</strong>  
+      Wherever you want to show the widget (inside theme files like `product.liquid`, `collection.liquid`, etc.), simply paste the `<div>` tag directly into the HTML/Liquid file.
+    </li>
   </ul>
 
-  <div>
-    <div class="example-container code-block">
-      <pre class="exampleCode">&lt;div class="evm-related-product ws_inr_main_wgt" data-wiser-widget="related_products"&gt;&lt;/div&gt;
+  <br>
+
+  <div class="example-container code-block">
+    <pre class="exampleCode">&lt;div class="evm-related-product ws_inr_main_wgt" data-wiser-widget="related_products"&gt;&lt;/div&gt;
 &lt;div class="recently-viewed ws_inr_main_wgt" data-wiser-widget="recently_products"&gt;&lt;/div&gt;
 &lt;div class="evm-recommended-products ws_inr_main_wgt" data-wiser-widget="recommended_products"&gt;&lt;/div&gt;
 &lt;div class="evm-most-popular-products ws_inr_main_wgt" data-wiser-widget="top_selling"&gt;&lt;/div&gt;
 &lt;div class="trending-products ws_inr_main_wgt" data-wiser-widget="trending_products"&gt;&lt;/div&gt;
 &lt;div class="evm-featured-collections-product ws_inr_main_wgt" data-wiser-widget="featured_collections"&gt;&lt;/div&gt;
-&lt;div class="evm-related-viewed-browsing ws_inr_main_wgt" data-wiser-widget="'recently_related_products"&gt;&lt;/div&gt;
+&lt;div class="evm-related-viewed-browsing ws_inr_main_wgt" data-wiser-widget="recently_related_products"&gt;&lt;/div&gt;
 &lt;div class="evm-also-bought-products ws_inr_main_wgt" data-wiser-widget="alsobought"&gt;&lt;/div&gt;</pre>
 
-      <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
-    </div>
+    <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
   </div>
 </li>
 
+
                       <!-- Step 2 -->
                       <li>
-                        <strong>How to Add a Widget to Your Page:</strong><br>
-                        Copy and paste the following HTML where you want to show
-                        the widget (homepage, product page, collection page,
-                        etc.):
-                        <div class="example-container code-block">
-                          <pre class="exampleCode">&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
-  data-wiser-widget="new_arrival"
-  data-cart-view="true"
-  data-no-of-products="5"
-  data-enable-feature="true"
-  data-no-products-pre-row="1"
-  data-product-view="slider"
-  data-arrow-position="ws-arrow-top-right"&gt;&lt;/div&gt;</pre>
-                          <button class="copy-btn" onclick="copyWidgetCode()">
-                            📋 Copy
-                          </button>
-                        </div>
-                      </li>
+  <strong>How to Add a Custom Widget to Your Page:</strong><br><br>
+
+  <strong>Where to Use:</strong><br>
+  Use this widget when you need a custom design for a specific section, where the 
+  product layout, spacing, number of products, arrow position, and responsiveness 
+  need to be different from other widgets on your site.
+  <br><br>
+
+  <strong>How to Add:</strong><br>
+  Copy and paste the following HTML code wherever you want to display the widget 
+  (e.g., homepage, product page, collection page, etc.).
+  <br><br>
+
+  <strong>Example – Slider View:</strong><br>
+  This example will display products in a slider layout with custom settings.
+  <br><br>
+
+  <div class="example-container code-block">
+    <pre class="exampleCode">&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
+     data-wiser-widget="new_arrival"
+     data-cart-view="true"
+     data-no-of-products="5"
+     data-enable-feature="true"
+     data-no-products-pre-row="1"
+     data-product-view="slider"
+     data-arrow-position="ws-arrow-top-right"&gt;
+&lt;/div&gt;
+    </pre>
+    <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+  </div>
+<br> <strong>Details for Slider Configuration:</strong>
+  <ul>
+    <li>
+      <code>data-no-of-products="6"</code> → Total 6 products shown
+    </li>
+    <li>
+      <code>data-no-products-pre-row="3"</code> → 3 products per row
+    </li>
+    <li>
+      <code>data-product-view="slider"</code> → Enables slider layout
+    </li>
+    <li>
+      <code>data-arrow-position="ws-arrow-top-right"</code> → Arrows positioned at top right
+    </li>
+  </ul>
+</li>
 
                       <!-- Step 3 -->
                       <li>
@@ -2325,68 +2366,102 @@ wiserAddedToCart();
                       </li>
 
                       <!-- Step 5 - Grid Example -->
-                      <li>
-                        <strong>Example – Grid View:</strong><br>
-                        Use this code if you want products shown in a grid
-                        layout:
-                        <div class="example-container code-block">
-                          <pre class="exampleCode">&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
-  data-wiser-widget="new_arrival"
-  data-cart-view="true"
-  data-no-of-products="6"
-  data-enable-feature="true"
-  data-no-products-pre-row="3"
-  data-product-view="grid"&gt;&lt;/div&gt;</pre>
-                          <button class="copy-btn" onclick="copyWidgetCode()">
-                            📋 Copy
-                          </button>
-                        </div>
-                        <p><strong>Details:</strong></p>
-                        <ul>
-                          <li>
-                            <code>data-no-of-products="6"</code> → Total 6
-                            products shown
-                          </li>
-                          <li>
-                            <code>data-no-products-pre-row="3"</code> → 3
-                            products per row
-                          </li>
-                          <li>
-                            <code>data-product-view="grid"</code> → Enables grid
-                            layout
-                          </li>
-                        </ul>
-                      </li>
+             <li>
+  <strong>Example – Grid View:</strong><br><br>
+
+  Use this code if you want products shown in a grid layout. This layout displays
+  products in rows and columns without a slider, ideal for static product sections.
+
+  <br><br>
+
+  <div class="example-container code-block">
+    <pre class="exampleCode">&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
+     data-wiser-widget="new_arrival"
+     data-cart-view="true"
+     data-no-of-products="6"
+     data-enable-feature="true"
+     data-no-products-pre-row="3"
+     data-product-view="grid"&gt;
+&lt;/div&gt;
+    </pre>
+    <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+  </div>
+
+  <br>
+
+  <strong>Details for Grid Configuration:</strong>
+  <ul>
+    <li>
+      <code>data-no-of-products="6"</code> → Total 6 products shown
+    </li>
+    <li>
+      <code>data-no-products-pre-row="3"</code> → 3 products per row
+    </li>
+    <li>
+      <code>data-product-view="grid"</code> → Enables grid layout
+    </li>
+  </ul>
+</li>
+
 
                       <!-- Step 6 - Slider with Responsive Example -->
-                      <li>
-                        <strong>Example – Slider View with Responsive
-                          Settings:</strong><br>
-                        Use this for full control on mobile, tablet, desktop
-                        layouts:
-                        <div class="example-container code-block">
-                          <pre class="exampleCode">&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
-  data-wiser-widget="new_arrival"
-  data-cart-view="true"
-  data-no-of-products="10"
-  data-enable-feature="true"
-  data-no-products-pre-row="3"
-  data-product-view="slider"
-  data-arrow-position="ws-arrow-top-right"
-  data-slider-settings='{
-    "loop": false,
-    "breakpoints": {
-      "0": { "slidesPerView": 1, "spaceBetween": 10 },
-      "300": { "slidesPerView": 1.1, "spaceBetween": 15 },
-      "768": { "slidesPerView": 1.5, "spaceBetween": 15 },
-      "1024": { "slidesPerView": 8, "spaceBetween": 10 }
-    }
-  }'&gt;&lt;/div&gt;</pre>
-                          <button class="copy-btn" onclick="copyWidgetCode()">
-                            📋 Copy
-                          </button>
-                        </div>
-                      </li>
+        <li>
+  <strong>Example – Slider View with Responsive Settings:</strong><br><br>
+
+  Use this version when you want full control over how the slider looks and behaves on mobile, tablet, and desktop devices.  
+  It's ideal when each widget needs a different layout, spacing, or number of visible products based on screen size.  
+  This setup is perfect for applying custom design and spacing rules that are specific to one section or widget only.
+
+  <br><br>
+
+  <div class="example-container code-block">
+    <pre class="exampleCode">&lt;div class="evm-new-arrivals-product ws_inr_main_wgt"
+ data-wiser-widget="new_arrival"
+ data-cart-view="true"
+ data-no-of-products="10"
+ data-enable-feature="true"
+ data-no-products-pre-row="3"
+ data-product-view="slider"
+ data-arrow-position="ws-arrow-top-right"
+ data-slider-settings='{
+   "loop": false,
+   "breakpoints": {
+     "0": { "slidesPerView": 1, "spaceBetween": 10 },
+     "300": { "slidesPerView": 1.1, "spaceBetween": 15 },
+     "768": { "slidesPerView": 1.5, "spaceBetween": 15 },
+     "1024": { "slidesPerView": 8, "spaceBetween": 10 }
+   }
+ }'&gt;
+&lt;/div&gt;
+    </pre>
+    <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+  </div>
+
+  <br>
+
+  <strong>Details for Responsive Slider:</strong>
+  <ul>
+    <li>
+      <code>data-no-of-products="10"</code> → Total 10 products shown in the widget
+    </li>
+    <li>
+      <code>data-product-view="slider"</code> → Enables slider/carousel layout
+    </li>
+    <li>
+      <code>data-arrow-position="ws-arrow-top-right"</code> → Arrows placed at top right
+    </li>
+    <li>
+      <code>data-slider-settings</code> → Custom responsive settings:
+      <ul>
+        <li><code>"0"</code> → On very small screens: 1 product with 10px spacing</li>
+        <li><code>"300"</code> → Slightly wider screens: 1.1 products visible with 15px spacing</li>
+        <li><code>"768"</code> → Tablet: 1.5 products with 15px spacing</li>
+        <li><code>"1024"</code> → Desktop: 8 products with 10px spacing</li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
 
                       <!-- Step 7 -->
 
