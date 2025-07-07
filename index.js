@@ -129,3 +129,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+ const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", function () {
+    // Show button when scrolled down 300px
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
