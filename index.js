@@ -40,43 +40,60 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // === LINK FUNCTIONALITY (Jump to tab & highlight) ===
-  document.querySelectorAll("a[data-tab]").forEach((link) => {
+   document.querySelectorAll("a[data-tab]").forEach((link) => {
     link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute("data-tab");
-      const target = document.getElementById(targetId);
-      if (target) {
-        document
-          .querySelectorAll(".highlight")
-          .forEach((el) => el.classList.remove("highlight"));
-        target.classList.add("highlight");
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+  e.preventDefault();
+  const targetId = link.getAttribute("data-tab");
+  const target = document.getElementById(targetId);
+  if (target) {
+    document
+      .querySelectorAll(".highlight")
+      .forEach((el) => el.classList.remove("highlight"));
+    target.classList.add("highlight");
+    const headerOffset = 80; 
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = window.pageYOffset + elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
     });
+  }
+});
   });
 
   // === LINK FUNCTIONALITY slider (Jump to tab & highlight) ===
 
-  document
-    .querySelectorAll(".slider-horizontal-tab .tab-btn")
-    .forEach((link) => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        document
-          .querySelectorAll(".slider-horizontal-tab .tab-btn")
-          .forEach((btn) => btn.classList.remove("active"));
-        this.classList.add("active");
-        document
-          .querySelectorAll(".evm_ws_outer")
-          .forEach((section) => section.classList.remove("active"));
-        const tabId = this.getAttribute("data-tab");
-        const target = document.getElementById(`evm-${tabId}`);
-        if (target) {
-          target.classList.add("active");
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      });
+ document.querySelectorAll(".slider-horizontal-tab .tab-btn").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelectorAll(".slider-horizontal-tab .tab-btn").forEach((btn) => {
+      btn.classList.remove("active");
     });
+    this.classList.add("active");
+
+    document.querySelectorAll(".evm_ws_outer").forEach((section) => {
+      section.classList.remove("active");
+    });
+
+    const tabId = this.getAttribute("data-tab");
+    const target = document.getElementById(`evm-${tabId}`);
+
+    if (target) {
+      target.classList.add("active");
+
+      const headerOffset = 80;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = window.pageYOffset + elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  });
+});
 
   // === "CLICK HERE AND CHECK EXAMPLE" FUNCTIONALITY ===
   document.querySelectorAll(".example-container a").forEach((link) => {
