@@ -75,12 +75,20 @@ body {
   color: white;
   box-shadow: 0 0 10px rgba(65, 29, 87, 0.3);
 }
-
+.slider-tab-nav, .ws-tab-nav{
+  position: sticky;
+  top: 0;
+  background: white; 
+  z-index: 1000;
+  padding: 20px 10px;
+  border-radius: 6px;
+box-shadow: 0 0 6px #20212426;
+}
 .nav-item i {
   font-size: 20px;
 }
 #scrollToTopBtn {
-    position: fixed !important;
+   position: fixed !important;
     left: 93%;
     top: 50%;
     transform: translate(-50%, -50%);
