@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // === LINK FUNCTIONALITY (Jump to tab & highlight) ===
-   document.querySelectorAll("a[data-tab]").forEach((link) => {
+  document.querySelectorAll("a[data-tab]").forEach((link) => {
     link.addEventListener("click", (e) => {
   e.preventDefault();
   const targetId = link.getAttribute("data-tab");
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (target) {
       target.classList.add("active");
 
-      const headerOffset = 80;
+      const headerOffset = 80; // same offset as your other snippet
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition = window.pageYOffset + elementPosition - headerOffset;
 
@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 
   // === "CLICK HERE AND CHECK EXAMPLE" FUNCTIONALITY ===
   document.querySelectorAll(".example-container a").forEach((link) => {
@@ -134,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // === HOVER ANIMATION FOR TEST CASES ===
   document.querySelectorAll(".test-case").forEach((testCase) => {
     testCase.addEventListener("mouseenter", () => {
       testCase.style.transform = "translateY(-2px)";
@@ -156,3 +156,16 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollBtn.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+//onlick image show 
+document.addEventListener("click", e => {
+  const id = e.target.id;
+  if (id && id.startsWith("directshow-")) {
+    e.preventDefault();
+    const target = document.getElementById("directcontainer-" + id.replace("directshow-", ""));
+    document.querySelectorAll('[id^="directcontainer-"]').forEach(d => d.style.display = "none");
+    if (target) target.style.display = "block";
+  } else if (!e.target.closest('[id^="directcontainer-"]') && !id?.startsWith("directshow-")) {
+    document.querySelectorAll('[id^="directcontainer-"]').forEach(d => d.style.display = "none");
+  }
+});
