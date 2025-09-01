@@ -1829,70 +1829,86 @@ wiserAddedToCart();
                         </div>
                      </div>
                   </div>
-                  <div class="Behavior-setting_outer evm_ws_outer" id="evm-Behavior">
-                     <div class="Behavior-settings">
-                        <h2>Slider Behavior</h2>
-                        <div class="user-guide" id="Behavior-main-min-heading">
-                           <ul>
-                              <li>
-                                 <strong>Enable Direction (Enable Dir):</strong> Choose the
-                                 scroll direction: <code>ltr</code> (left-to-right) or
-                                 <code>rtl</code> (right-to-left) depending on layout.
-                              </li>
-                              <li>
-                                 <strong>Loop:</strong> Makes the slider repeat endlessly.
-                                 After reaching the last slide, it loops back to the first.
-                              </li>
-                              <li>
-                                 <strong>Centered Slides:</strong> Keeps the active slide
-                                 in the center. This is ideal for partial slides on the
-                                 edges.
-                              </li>
-                              <li>
-                                 <strong>CSS Mode:</strong> Enables native browser
-                                 scrolling with snap behavior. Useful for simple, fast
-                                 sliders.
-                              </li>
-                              <li>
-                                 <strong>Resize Observer:</strong> Automatically adjusts
-                                 the slider when its container or content changes size.
-                              </li>
-                              <li>
-                                 <strong>Space Between (in px):</strong> Defines the
-                                 horizontal gap between slider cards. For example,
-                                 <code>10</code> adds a 10px space between each card.
-                              </li>
-                              <li>
-                                 <strong>Add Text:</strong> This field can also be used to
-                                 insert custom JavaScript (like Swiper.js settings) for
-                                 responsive behavior. For example, you can control how many
-                                 slides are visible based on screen width using
-                                 <code>slidesPerView</code> with fractional values. This
-                                 makes part of the next slide visible, improving the visual
-                                 flow.
-                                 <div class="example-container code-block" bis_skin_checked="1">
-                                    <pre class="exampleCode">&lt;div class='ws-drawer-all'&gt;
-    &lt;div class='evm-new-arrivals-product ws_crt_wgt' data-wiser-page='cartdrawer'  data-design-view="true" data-wiser-widget='new_arrival' data-cart-view='true' 
-         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right' 
-         data-slider-settings=
-    '{'loop':false,'breakpoints':{'0':{'slidesPerView':1,'spaceBetween':10},'300':{'slidesPerView':1.1,'spaceBetween':15},'768':{'slidesPerView':1.5,'spaceBetween':15},
-    '1024':{'slidesPerView':8,'spaceBetween':10}}}'&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-    </pre>
-                                    <button class="copy-btn" onclick="copyWidgetCode()">
-                                    📋 Copy
-                                    </button>
-                                 </div>
-                                 This approach lets you build a responsive slider directly
-                                 from the Add Text field, without needing extra script tags
-                                 elsewhere.
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+<div class="Behavior-setting_outer evm_ws_outer" id="evm-Behavior">
+  <div class="Behavior-settings">
+    <h2>Slider Behavior</h2>
+    <div class="user-guide" id="Behavior-main-min-heading">
+      <ul>
+        <li>
+          <strong>Enable Direction ("direction"):</strong> Controls the slide direction. Use <code>"ltr"</code> for left-to-right or <code>"rtl"</code> for right-to-left, based on layout needs.
+        </li>
+        <li>
+          <strong>Loop ("loop"):</strong> When set to <code>true</code>, the slider will repeat endlessly. After reaching the last slide, it loops back to the first.
+        </li>
+        <li>
+          <strong>Centered Slides ("centeredSlides"):</strong> Keeps the active slide centered within the viewport, especially helpful when showing partial slides on the sides.
+        </li>
+        <li>
+          <strong>CSS Mode ("cssMode"):</strong> Enables native browser scrolling with snap behavior. Useful for simple, fast sliders that don’t require full Swiper JS features.
+        </li>
+        <li>
+          <strong>Resize Observer ("observeParents", "observer"):</strong> Enables automatic resizing of the slider when its parent container or window resizes.
+        </li>
+        <li>
+          <strong>Space Between ("spaceBetween"):</strong> Sets the horizontal spacing between slides in pixels. For example, <code>10</code> adds a 10px gap between slides.
+        </li>
+        <li>
+          <strong>Slides Per View ("slidesPerView"):</strong> Defines how many slides are visible at once. You can use decimal values like <code>2.2</code> to partially show the next slide.
+        </li>
+
+        <li>
+          <strong>Advanced Settings (Swiper.js Options):</strong> These are optional but powerful enhancements you can add to improve UX:
+          <ul>
+            <li>
+              <code>"autoplay": { "delay": 3000 }</code> – Enables automatic sliding every 3 seconds (3000ms).
+            </li>
+            <li>
+              <code>"navigation": true</code> – Adds next (›) and previous (‹) arrow buttons for manual navigation.
+            </li>
+            <li>
+              <code>"pagination": { "clickable": true }</code> – Displays clickable dot indicators for each slide.
+            </li>
+            <li>
+              <code>"speed": 500</code> – Controls transition speed between slides in milliseconds. <code>500</code> = half a second.
+            </li>
+            <li>
+              <code>"direction": "horizontal"</code> – Sets movement direction to horizontal. Use <code>"vertical"</code> for up/down movement.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Add Text Field (Slider Settings JSON):</strong> Use the field to paste clean, properly formatted Swiper settings in JSON format.
+
+          <div class="example-container code-block">
+            <pre class="exampleCode" id="sliderSettingsExample">[
+  {
+    "loop": true,
+    "breakpoints": {
+      "0": {
+        "slidesPerView": 2.2,
+        "spaceBetween": 10
+      },
+      "768": {
+        "slidesPerView": 3.2,
+        "spaceBetween": 12
+      },
+      "999": {
+        "slidesPerView": 4.2,
+        "spaceBetween": 15
+      }
+    }
+  }
+]</pre>
+            <button class="copy-btn" onclick="copySliderSettings()">📋 Copy</button>
+          </div>
+
+          <p><strong>📝 Note:</strong> Always use <code>"double quotes"</code> (not single quotes) and valid JSON format. Improper formatting like missing commas or wrong brackets will cause errors. It's recommended to format your JSON using a tool like <strong>VS Code</strong> or an online JSON validator.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
             </div>
             <!-- Cart Drawer Settings Section -->
             <div class="section-content" id="cart-drawer">
@@ -2449,3 +2465,4 @@ data-slider-settings='{
       <script src="index.js"></script>
    </body>
 </html>
+
