@@ -1041,55 +1041,58 @@
                      </div>
                   </div>
                   <!-- Badge Section -->
-                  <div class="evm_Badge-setting_outer evm_ws_outer" id="Badge">
+                 <div class="evm_Badge-setting_outer evm_ws_outer active highlight" id="Badge">
                      <div class="evm_Badge-settings">
-                        <h1>Badge Settings</h1>
-                        <div
-                           class="user-guide"
-                           id="Badge-settings-guide"
-                           bis_skin_checked="1"
-                           >
-                           <ul>
-                              <li>
-                                 <strong>Add Class Name:</strong> In the input box below,
-                                 you can enter a CSS class name for your badge (e.g.,
-                                 <code>badge-red</code>, <code>badge-outline</code>,
-                                 <code>badge-glow</code>). If your theme already includes
-                                 styling for that class, you don’t need to write any extra
-                                 CSS.
-                              </li>
-                              <li>
-                                 <strong>Position:</strong> Choose where the badge appears
-                                 on the product image, such as <code>Top Right</code>,
-                                 <code>Top Left</code>, <code>Bottom Left</code>, or
-                                 <code>Bottom Right</code>.
-                              </li>
-                              <li>
-                                 <strong>Product Tags Badge:</strong> Displays a custom
-                                 badge when a product has specific tags. For example, if a
-                                 product tag is <code>toys</code>, you can show a badge
-                                 like <code>30 off at here</code>.
-                              </li>
-                              <li>
-                                 <strong>Save Badge:</strong> Shows discount badges based
-                                 on product pricing. You can display percentage off (e.g.,
-                                 <code>20% off</code>) or amount saved (e.g.,
-                                 <code>$5 save</code>) based on your settings.
-                              </li>
-                              <li>
-                                 <strong>Product Type Badge:</strong> Automatically
-                                 displays a badge showing the product type, like
-                                 <code>Shirt</code> or <code>Accessories</code>, based on
-                                 the product’s type.
-                              </li>
-                              <li>
-                                 <strong>Add JSON in Max Badge:</strong> You can paste your
-                                 badge configuration JSON in the box above to customize
-                                 which badges appear based on tag, type, or pricing rules.
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
+  <h1>Badge Settings</h1>
+  <div class="user-guide" id="Badge-settings-guide">
+    <ul>
+      <li>
+        <strong>Add Class Name:</strong>
+        In the input box below, you can enter a CSS class name for your badge
+        (e.g., <code>"badge-red"</code>, <code>"badge-outline"</code>,
+        <code>"badge-glow"</code>). If your theme already includes styling for
+        that class, you don’t need to write any extra CSS.
+      </li>
+
+      <li>
+        <strong>Position:</strong>
+        Choose where the badge appears on the product image, such as
+        <code>"Top Right"</code>, <code>"Top Left"</code>,
+        <code>"Bottom Left"</code>, or <code>"Bottom Right"</code>.
+      </li>
+
+      <li>
+        <strong>Product Tags Badge:</strong>
+        Displays a custom badge when a product has specific tags.
+        For example, if a product tag is <code>"toys"</code>,
+        you can show a badge like <code>"30% off at here"</code>.
+      </li>
+
+      <li>
+        <strong>Save Badge:</strong>
+        Shows discount badges based on product pricing.
+        You can display percentage off (e.g., <code>"20% off"</code>)
+        or amount saved (e.g., <code>"$5 save"</code>) depending on your settings.
+      </li>
+
+      <li>
+        <strong>Product Type Badge:</strong>
+        Automatically displays a badge showing the product type,
+        like <code>"Shirt"</code> or <code>"Accessories"</code>,
+        based on the product’s assigned type.
+      </li>
+
+      <li>
+        <strong>Add JSON in Max Badge:</strong>
+        You can paste your badge configuration JSON in the box above.
+        This controls which badges appear based on product tags, types,
+        discount logic, or metaobject fields.
+        Make sure the format is correct — otherwise, badges will not appear.
+      </li>
+    </ul>
+  </div>
+</div>
+
                      <div class="tab-nav">
                         <button class="tab-btn active" data-tab="overview-Badge">
                         Overview
@@ -1104,205 +1107,185 @@
                         <button class="tab-btn" data-tab="notes-Badge">Notes</button>
                      </div>
                      <!-- overview for Badge -->
-                     <div
-                        class="evm-tab-content tab-content-Badge active"
-                        id="overview-Badge"
-                        >
-                        <h3>🏷️ Badge Settings – Overview</h3>
-                        <ul>
-                           <li>
-                              <strong>Add Class Name:</strong> In the input box below, you
-                              can enter a custom CSS class for your badge, such as
-                              <code>badge-red</code>, <code>badge-outline</code>, or
-                              <code>badge-glow</code>. If your theme already supports that
-                              class, it will automatically apply the styles—no extra CSS
-                              needed.
-                           </li>
-                           <li>
-                              <strong>Position:</strong> Use this setting to place the
-                              badge at a specific corner of the product image. Available
-                              options include <code>Top Right</code>,
-                              <code>Top Left</code>, <code>Bottom Left</code>, and
-                              <code>Bottom Right</code>. The badge will visually "stick"
-                              to the selected corner.
-                           </li>
-                           <li>
-                              <strong>Product Type Badge Settings:</strong> This section
-                              controls the product type badges shown on your product
-                              cards. To enable the badge, set
-                              <code>"productTypeBadgeproductTypeBadge": true</code>. The
-                              product type (such as "New Arrival", "Sale", "Featured",
-                              etc.) will be shown dynamically as the badge on your product
-                              card. <br /><br />
-                              <strong>Example:</strong>
-                              <div
-                                 class="example-container code-block"
-                                 bis_skin_checked="1"
-                                 >
-                                 <pre class="exampleCode">
-{
-    'roductTypeBadge': true
-  }</pre
-                                    >
-                                 <button class="copy-btn" onclick="copyWidgetCode()">
-                                 📋 Copy
-                                 </button>
-                              </div>
-                              This will display the corresponding product type badge
-                              (e.g., "New Arrival", "Sale", etc.) on your product card
-                              depending on the product type.
-                           </li>
-                           <li>
-                              <strong>SaveBadge Settings:</strong> This section controls
-                              the discount badges shown on your product cards. To enable
-                              the badge, set <code>"enable": true</code>. You can choose
-                              between showing the discount as a percentage (e.g.,
-                              <code>20% off</code>) by setting
-                              <code>"percentage": true</code>, or as an amount saved
-                              (e.g., <code>$10 save</code>) by using
-                              <code>"savePrice": true</code>. Only one of these will
-                              display at a time, and you can control which one gets
-                              priority using <code>"percentage_text"</code> and
-                              <code>"savePrice_text"</code> to customize the ending
-                              text—like <code>"off"</code> or <code>"saved"</code>.
-                              <br /><br />
-                              <strong>Example:</strong>
-                              <div
-                                 class="example-container code-block"
-                                 bis_skin_checked="1"
-                                 >
-                                 <pre class='exampleCode'>[
-  {
-    'productTypeBadge': true,
-    'SaveBadge': {
-      'enable': true,
-      'swap': true,
-      'percentage': true,
-      'savePrice': false,
-      'percentage_text': 'off',
-      'savePrice_text': 'save'
-    }
+                     <div class="evm-tab-content tab-content-Badge active" id="overview-Badge">
+  <h3>🏷️ Badge Settings – Overview</h3>
+  <ul>
+    <li>
+      <strong>Add Class Name:</strong> Enter a custom CSS class name such as
+      <code>badge-red</code>, <code>badge-outline</code>, or <code>badge-glow</code>.
+      If your theme supports the class, styles will apply automatically without needing extra CSS.
+    </li>
+
+    <li>
+      <strong>Position:</strong> Choose where the badge will appear on the product image.
+      Options include <code>Top Right</code>, <code>Top Left</code>,
+      <code>Bottom Left</code>, and <code>Bottom Right</code>.
+    </li>
+
+    <li>
+      <strong>Product Type Badge:</strong> Automatically displays the product’s type
+      (e.g., <code>Shirt</code>, <code>Sale</code>, <code>New Arrival</code>) as a badge.
+      Enable this with:
+      <div class="example-container code-block">
+        <pre class="exampleCode">{
+  "productTypeBadge": true
+}
+        </pre>
+        <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+      </div>
+    </li>
+
+    <li>
+      <strong>Save Badge:</strong> Displays discount badges.
+      You can show a percentage (e.g., <code>20% off</code>) or saved amount
+      (e.g., <code>$10 save</code>). Only one will show at a time.
+      You can customize the suffixes using <code>percentage_text</code> and <code>savePrice_text</code>.
+      <br><br>
+      Example:
+      <div class="example-container code-block">
+        <pre class="exampleCode">{
+  "SaveBadge": {
+    "enable": true,
+    "swap": true,
+    "percentage": true,
+    "savePrice": false,
+    "percentage_text": "off",
+    "savePrice_text": "save"
   }
-]</pre>
-                                 <button
-                                    class="copy-btn"
-                                    onclick="copyWidgetCode()"
-                                    >
-                                 📋 Copy
-                                 </button>
-                              </div>
-                              This will show the badge as <code>20% off</code> on your
-                              product image.
-                           </li>
-                           <li>
-                              <strong>Product Tags Badges Settings:</strong> This section
-                              controls the product tags badges displayed on your product
-                              cards. - To enable the badge, set
-                              <code>"enable": true</code>. If <code>"enable"</code> is set
-                              to <code>false</code>, the badge will not be shown. - You
-                              need to assign specific tags to your products to make these
-                              badges appear. - Define the badge text in the
-                              <code>"tags"</code> field, where each tag has a custom badge
-                              message. - For example, you can add a tag like
-                              <code>"toys": "30 off at here"</code> to display a "30 off
-                              at here" badge for products tagged as "toys."
-                              <br /><br />
-                              <strong>Example:</strong>
-                              <div
-                                 class="example-container code-block"
-                                 bis_skin_checked="1"
-                                 >
-                                 <pre class='exampleCode'>[
+}
+        </pre>
+        <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+      </div>
+    </li>
+
+    <li>
+      <strong>Product Tags Badges:</strong> Show badges for specific product tags.
+      You must assign those tags to the products, and define custom messages per tag.
+      <br><br>
+      Example:
+      <div class="example-container code-block">
+        <pre class="exampleCode">[
   {
-    'productTagsBadges': {
-      'enable': true,
-      'tags': {
-        'toys': '30 off at here'
+    "productTagsBadges": {
+      "enable": true,
+      "tags": {
+        "toys": "30% off at here"
       }
     }
   },
   {
-    'productTagsBadges': {
-      'enable': true,
-      'tags': {
-        'wiser': 'test-new'
+    "productTagsBadges": {
+      "enable": true,
+      "tags": {
+        "wiser": "test-new"
       }
     }
   }
-]</pre>
-                                 <button
-                                    class="copy-btn"
-                                    onclick="copyWidgetCode()"
-                                    >
-                                 📋 Copy
-                                 </button>
-                              </div>
-                              - This will show the badge <code>30 off at here</code> for
-                              products tagged with <code>"toys"</code> and
-                              <code>test-new</code> for products tagged with
-                              <code>"wiser"</code>. - Make sure to assign the tags like
-                              <code>"toys"</code> and <code>"wiser"</code> to the relevant
-                              products in your store for the badges to appear.
-                           </li>
-                           <li>
-                              <strong>Badge Settings:</strong> To enable all badges, use
-                              the following code: <br /><br />
-                              <strong>Example:</strong>
-                              <div
-                                 class="example-container code-block"
-                                 bis_skin_checked="1"
-                                 >
-                                 <pre class="exampleCode">
-[
+]
+        </pre>
+        <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+      </div>
+    </li>
+
+    <li>
+      <strong>Availability Badge (In Stock / Out of Stock):</strong>
+      Displays a badge based on stock status.
+      <br><br>
+      Example:
+      <div class="example-container code-block">
+        <pre class="exampleCode">"available": {
+  "enable": true,
+  "instoke": "in stock",
+  "outOfStoke": "out of stock"
+}
+        </pre>
+        <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+      </div>
+    </li>
+
+    <li>
+      <strong>Metaobject Badges:</strong> Show badges based on metaobject fields
+      (e.g., product attributes like "gradazione", "formato", etc.).
+      <br><br>
+      Example:
+      <div class="example-container code-block">
+        <pre class="exampleCode">"metaobjectBadges": {
+  "enable": true,
+  "key": "gradazione"
+}
+        </pre>
+        <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+      </div>
+    </li>
+
+    
+
+      <li>
+        <strong>All-In-One Example (Full Configuration):</strong><br>
+        This enables all badge types including tags, types, availability, and discount.
+        <br><br>
+        <div class="example-container code-block">
+          <pre class="exampleCode">[
   {
-    'productTypeBadge': true,
-    'SaveBadge': {
-      'enable': true,
-      'swap': true,
-      'percentage': true,
-      'savePrice': false,
-      'percentage_text': 'off',
-      'savePrice_text': 'save'
+    "productTypeBadge": true,
+    "productTagsBadges": {
+      "enable": true,
+      "tags": {
+        "аксесоари": "аксесоари",
+        "шума": "шума"
+      }
     },
-    'productTagsBadges': {
-      'enable': true,
-      'tags': {
-        'toys': '30% off at here'
-      }
+    "available": {
+      "enable": true,
+      "instoke": "in stock",
+      "outOfStoke": "out of stock"
+    },
+    "SaveBadge": {
+      "showValue": false,
+      "enable": true,
+      "swap": false,
+      "percentage": false,
+      "savePrice": true,
+      "percentage_text": "off",
+      "savePrice_text": "save"
+    },
+    "metaobjectBadges": {
+      "enable": true,
+      "key": "gradazione"
     }
   },
   {
-    'productTagsBadges': {
-      'enable': true,
-      'tags': {
-        'wiser': 'test-new'
-      }
+    "metaobjectBadges": {
+      "enable": true,
+      "key": "formato"
     }
   }
-]</pre
-                                    >
-                                 <button
-                                    class="copy-btn"
-                                    onclick="copyWidgetCode()"
-                                    >
-                                 📋 Copy
-                                 </button>
-                              </div>
-                           </li>
-                        </ul>
-                        <div class="example-container code-block" bis_skin_checked="1">
-                           <pre class="exampleCode">
-&lt;span class="badge-outline top-left"&gt;Limited Edition&lt;/span&gt;</pre
-                              >
-                           <a
-                              href="#"
-                              id="goToExamples"
-                              data-target="Badge"
-                              class="Badge-example-link"
-                              >Click here and check example</a
-                              >
-                        </div>
-                     </div>
+]</pre>
+          <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+        </div>
+
+        <strong>How it works:</strong><br>
+        <ul>
+          <li>If product has tag <code>аксесоари</code>, it will show badge: <strong>аксесоари</strong></li>
+          <li>If product has tag <code>шума</code>, it will show badge: <strong>шума</strong></li>
+          <li>If product is in stock → shows badge: <strong>in stock</strong></li>
+          <li>If product is out of stock → shows badge: <strong>out of stock</strong></li>
+          <li>If there's a price discount, it will show <strong>save</strong> amount (₹ or $ based on store currency)</li>
+          <li>If product has metafield <code>gradazione</code> or <code>formato</code>, that value is shown as badge.</li>
+          <li>If product type is set, that type is shown as a badge (like <code>Shoes</code> or <code>Accessories</code>).</li>
+        </ul>
+      </li>
+  </ul>
+
+  <div class="example-container code-block">
+    <pre class="exampleCode">&lt;span class="badge-outline top-left"&gt;Limited Edition&lt;/span&gt;
+    </pre>
+    <a href="#" id="goToExamples" data-target="Badge" class="Badge-example-link">
+      Click here and check example
+    </a>
+  </div>
+</div>
+
                      <!-- files for Badge -->
                      <div class="evm-tab-content tab-content-Badge" id="files-Badge">
                         <h2>Product Card Implementation</h2>
@@ -1314,10 +1297,7 @@
                         </div>
                      </div>
                      <!-- test cases for Badge -->
-                     <div
-                        class="evm-tab-content tab-content-Badge"
-                        id="test-cases-Badge"
-                        >
+                     <div class="evm-tab-content tab-content-Badge" id="test-cases-Badge">
                         <h2>Product Card Test Cases</h2>
                         <div class="test-cases">
                            <div class="test-case">
@@ -1339,11 +1319,7 @@
                         </div>
                      </div>
                      <!-- example for Badge -->
-                     <div
-                        class="evm-tab-content tab-content-Badge"
-                        id="examples-Badge"
-                        bis_skin_checked="1"
-                        >
+                     <div class="evm-tab-content tab-content-Badge" id="examples-Badge" bis_skin_checked="1">
                         <h2 style="font-size: 24px; margin-bottom: 1rem">
                            🏷️ Badge Position – Visual Guide
                         </h2>
@@ -1356,40 +1332,24 @@
                            <strong>Bottom Right</strong>.
                         </p>
                         <!-- Image Preview -->
-                        <div
-                           style="text-align: center; margin-bottom: 20px"
-                           bis_skin_checked="1"
-                           >
-                           <a
-                              href="https://cdn.shopify.com/s/files/1/0522/5932/4060/files/A_digital_photograph_displays_a_single_low-top_whi.png?v=1744789500"
-                              target="_blank"
-                              bis_size='{"x":791,"y":6465,"w":591,"h":21,"abs_x":791,"abs_y":6465}'
-                              >
-                           <img
-                              src="https://cdn.shopify.com/s/files/1/0522/5932/4060/files/ChatGPT_Image_Apr_16_2025_03_53_29_PM.png?v=1744799202"
-                              alt="Badge Position Guide"
-                              style="
+                        <div style="text-align: center; margin-bottom: 20px" bis_skin_checked="1">
+                           <a href="https://cdn.shopify.com/s/files/1/0522/5932/4060/files/A_digital_photograph_displays_a_single_low-top_whi.png?v=1744789500" target="_blank" bis_size="{&quot;x&quot;:791,&quot;y&quot;:6465,&quot;w&quot;:591,&quot;h&quot;:21,&quot;abs_x&quot;:791,&quot;abs_y&quot;:6465}">
+                           <img src="https://cdn.shopify.com/s/files/1/0522/5932/4060/files/ChatGPT_Image_Apr_16_2025_03_53_29_PM.png?v=1744799202" alt="Badge Position Guide" style="
                               max-width: 60%;
                               height: auto;
                               border: 1px solid #e1dfe7;
                               border-radius: 10px;
                               box-shadow: 0 2px 4px rgba(65, 29, 87, 0.2);
                               transition: box-shadow 0.3s ease;
-                              "
-                              bis_size='{"x":791,"y":5890,"w":591,"h":591,"abs_x":791,"abs_y":5890}'
-                              bis_id="bn_6u09xdiwo94vaza6xcr3nm"
-                              />
+                              " bis_size="{&quot;x&quot;:791,&quot;y&quot;:5890,&quot;w&quot;:591,&quot;h&quot;:591,&quot;abs_x&quot;:791,&quot;abs_y&quot;:5890}" bis_id="bn_6u09xdiwo94vaza6xcr3nm">
                            </a>
                         </div>
                         <!-- Use Case Grid -->
-                        <div
-                           style="
+                        <div style="
                            display: grid;
                            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                            gap: 1rem;
-                           "
-                           bis_skin_checked="1"
-                           >
+                           " bis_skin_checked="1">
                            <div bis_skin_checked="1">
                               <strong>↖️ Top Left:</strong> Badge appears at the top-left
                               corner of the image.
@@ -1829,88 +1789,71 @@ wiserAddedToCart();
                         </div>
                      </div>
                   </div>
-<div class="Behavior-setting_outer evm_ws_outer" id="evm-Behavior">
-  <div class="Behavior-settings">
-    <h2>Slider Behavior</h2>
-    <div class="user-guide" id="Behavior-main-min-heading">
-      <ul>
-        <li>
-          <strong>Enable Direction ("direction"):</strong> Controls the slide direction. Use <code>"ltr"</code> for left-to-right or <code>"rtl"</code> for right-to-left, based on layout needs.
-        </li>
-        <li>
-          <strong>Loop ("loop"):</strong> When set to <code>true</code>, the slider will repeat endlessly. After reaching the last slide, it loops back to the first.
-        </li>
-        <li>
-          <strong>Centered Slides ("centeredSlides"):</strong> Keeps the active slide centered within the viewport, especially helpful when showing partial slides on the sides.
-        </li>
-        <li>
-          <strong>CSS Mode ("cssMode"):</strong> Enables native browser scrolling with snap behavior. Useful for simple, fast sliders that don’t require full Swiper JS features.
-        </li>
-        <li>
-          <strong>Resize Observer ("observeParents", "observer"):</strong> Enables automatic resizing of the slider when its parent container or window resizes.
-        </li>
-        <li>
-          <strong>Space Between ("spaceBetween"):</strong> Sets the horizontal spacing between slides in pixels. For example, <code>10</code> adds a 10px gap between slides.
-        </li>
-        <li>
-          <strong>Slides Per View ("slidesPerView"):</strong> Defines how many slides are visible at once. You can use decimal values like <code>2.2</code> to partially show the next slide.
-        </li>
-
-        <li>
-          <strong>Advanced Settings (Swiper.js Options):</strong> These are optional but powerful enhancements you can add to improve UX:
-          <ul>
-            <li>
-              <code>"autoplay": { "delay": 3000 }</code> – Enables automatic sliding every 3 seconds (3000ms).
-            </li>
-            <li>
-              <code>"navigation": true</code> – Adds next (›) and previous (‹) arrow buttons for manual navigation.
-            </li>
-            <li>
-              <code>"pagination": { "clickable": true }</code> – Displays clickable dot indicators for each slide.
-            </li>
-            <li>
-              <code>"speed": 500</code> – Controls transition speed between slides in milliseconds. <code>500</code> = half a second.
-            </li>
-            <li>
-              <code>"direction": "horizontal"</code> – Sets movement direction to horizontal. Use <code>"vertical"</code> for up/down movement.
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>Add Text Field (Slider Settings JSON):</strong> Use the field to paste clean, properly formatted Swiper settings in JSON format.
-
-          <div class="example-container code-block">
-            <pre class="exampleCode" id="sliderSettingsExample">[
-  {
-    "loop": true,
-    "breakpoints": {
-      "0": {
-        "slidesPerView": 2.2,
-        "spaceBetween": 10
-      },
-      "768": {
-        "slidesPerView": 3.2,
-        "spaceBetween": 12
-      },
-      "999": {
-        "slidesPerView": 4.2,
-        "spaceBetween": 15
-      }
-    }
-  }
-]</pre>
-            <button class="copy-btn" onclick="copySliderSettings()">📋 Copy</button>
-          </div>
-
-          <p><strong>📝 Note:</strong> Always use <code>"double quotes"</code> (not single quotes) and valid JSON format. Improper formatting like missing commas or wrong brackets will cause errors. It's recommended to format your JSON using a tool like <strong>VS Code</strong> or an online JSON validator.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-</div>
+                  <div class="Behavior-setting_outer evm_ws_outer" id="evm-Behavior">
+                     <div class="Behavior-settings">
+                        <h2>Slider Behavior</h2>
+                        <div class="user-guide" id="Behavior-main-min-heading">
+                           <ul>
+                              <li>
+                                 <strong>Enable Direction (Enable Dir):</strong> Choose the
+                                 scroll direction: <code>ltr</code> (left-to-right) or
+                                 <code>rtl</code> (right-to-left) depending on layout.
+                              </li>
+                              <li>
+                                 <strong>Loop:</strong> Makes the slider repeat endlessly.
+                                 After reaching the last slide, it loops back to the first.
+                              </li>
+                              <li>
+                                 <strong>Centered Slides:</strong> Keeps the active slide
+                                 in the center. This is ideal for partial slides on the
+                                 edges.
+                              </li>
+                              <li>
+                                 <strong>CSS Mode:</strong> Enables native browser
+                                 scrolling with snap behavior. Useful for simple, fast
+                                 sliders.
+                              </li>
+                              <li>
+                                 <strong>Resize Observer:</strong> Automatically adjusts
+                                 the slider when its container or content changes size.
+                              </li>
+                              <li>
+                                 <strong>Space Between (in px):</strong> Defines the
+                                 horizontal gap between slider cards. For example,
+                                 <code>10</code> adds a 10px space between each card.
+                              </li>
+                              <li>
+                                 <strong>Add Text:</strong> This field can also be used to
+                                 insert custom JavaScript (like Swiper.js settings) for
+                                 responsive behavior. For example, you can control how many
+                                 slides are visible based on screen width using
+                                 <code>slidesPerView</code> with fractional values. This
+                                 makes part of the next slide visible, improving the visual
+                                 flow.
+                                 <div class="example-container code-block" bis_skin_checked="1">
+                                    <pre class="exampleCode">&lt;div class='ws-drawer-all'&gt;
+    &lt;div class='evm-new-arrivals-product ws_crt_wgt' data-wiser-page='cartdrawer'  data-design-view="true" data-wiser-widget='new_arrival' data-cart-view='true' 
+         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right' 
+         data-slider-settings=
+    '{'loop':false,'breakpoints':{'0':{'slidesPerView':1,'spaceBetween':10},'300':{'slidesPerView':1.1,'spaceBetween':15},'768':{'slidesPerView':1.5,'spaceBetween':15},
+    '1024':{'slidesPerView':8,'spaceBetween':10}}}'&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </pre>
+                                    <button class="copy-btn" onclick="copyWidgetCode()">
+                                    📋 Copy
+                                    </button>
+                                 </div>
+                                 This approach lets you build a responsive slider directly
+                                 from the Add Text field, without needing extra script tags
+                                 elsewhere.
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
                </div>
+            </div>
             <!-- Cart Drawer Settings Section -->
             <div class="section-content" id="cart-drawer">
                <div class="drawer-settings" id="Drawer-settings">
@@ -2466,5 +2409,3 @@ data-slider-settings='{
       <script src="index.js"></script>
    </body>
 </html>
-
-
