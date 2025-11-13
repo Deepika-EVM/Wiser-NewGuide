@@ -56,10 +56,9 @@
                      <a href="#" class="tab-btn" data-tab="Vendor">Vendor</a>
                      <a href="#" class="tab-btn" data-tab="Badge">Badge</a>
                      <a href="#" class="tab-btn" data-tab="Wishlist">Wishlist</a>
-                     <a href="#" class="tab-btn" data-tab="Drawer">Drawer</a
-                        ><a href="#" class="tab-btn" data-tab="Db-function"
-                        >Db Function</a
-                        >
+                     <a href="#" class="tab-btn" data-tab="Drawer">Drawer</a>
+                       <a href="#" class="tab-btn" data-tab="Db-function">Db Function</a>
+                    <a href="#" class="tab-btn" data-tab="resslider-function">Res Slider</a>
                   </div>
                   <!-- Heading Section -->
                   <div class="evm_heading-setting_outer evm_ws_outer" id="Heading">
@@ -1661,6 +1660,177 @@ wiserAddedToCart();
                         </div>
                      </div>
                   </div>
+                 <div class="evm_res_slider-setting_outer evm_ws_outer highlight" id="resslider-function">
+  <div class="evm_resslider-function-settings evm-tab-content">
+
+    <!-- Main Heading -->
+    <h2>🌀 Swiper.js Slider Settings Documentation</h2>
+
+    <div class="user-guide">
+
+      <!-- Introduction Section -->
+      <h4>How to Configure a Responsive Slider in Wiser Admin:</h4>
+      <ul>
+        <li>
+          1. Go to the <strong>Slider Settings</strong> section in Wiser Admin. 
+          2. In the settings, look for an option called <strong>Responsive Slider</strong>. This is where you’ll paste your Swiper.js settings code. 
+          3. The code you paste must be in <strong>array format</strong>, with each key and value wrapped in double quotes (""). This is essential for the settings to work correctly. 
+          4. If you need to customize the slider further, refer to the official <a href="https://swiperjs.com/" target="_blank">Swiper.js documentation</a>. 
+          5. Once the code is pasted in the required field, your slider will be configured as per the settings.
+        </li>
+      </ul>
+
+      <!-- Slider Settings Explanation Section -->
+      <h3>Slider Settings Explained</h3>
+      <ul>
+        <li><strong>"slidesPerView": "auto"</strong> – Adjusts the number of visible slides based on the container width, ensuring responsiveness.</li>
+        <li><strong>"freeMode": true</strong> – Allows users to scroll freely between slides, without snapping to a specific slide.</li>
+        <li><strong>"loop": true</strong> – Enables infinite looping of slides, so when the user reaches the last slide, it loops back to the first one.</li>
+        <li><strong>"speed": 2200</strong> – Transition time between slides, in milliseconds (2200ms or 2.2 seconds).</li>
+        <li><strong>"autoplay": { }</strong> – Controls the autoplay behavior:
+          <ul>
+            <li><strong>"delay": 0</strong> – No delay between slides; transitions happen immediately.</li>
+            <li><strong>"disableOnInteraction": false</strong> – Autoplay continues even after user interactions.</li>
+            <li><strong>"pauseOnMouseEnter": true</strong> – Autoplay pauses when the mouse hovers over the slider.</li>
+          </ul>
+        </li>
+        <li><strong>"breakpoints": { }</strong> – Defines settings for different screen sizes:
+          <ul>
+            <li><strong>For screens 768px and above:</strong> Shows 3 slides at once instead of adjusting automatically.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Example Code Block for Copying -->
+      <h4>1. Basic Slider Configuration:</h4>
+      <ul>
+        <li>This basic configuration sets up a simple responsive slider with loop functionality and autoplay enabled.</li>
+      </ul>
+      <div class="example-container code-block">
+          <pre class="exampleCode">[
+    {
+        "slidesPerView": "auto",
+        "loop": true,
+        "autoplay": {
+            "delay": 0,
+            "disableOnInteraction": false,
+            "pauseOnMouseEnter": true
+        }
+    }
+]</pre>
+          <button class="copy-btn" onclick="copyCode('Basic Slider')">📋 Copy</button>
+      </div>
+
+      <!-- Responsive Slider Configuration Section -->
+      <h4>2. Responsive Slider Configuration (Breakpoints):</h4>
+      <ul>
+        <li>Customize settings for different screen sizes using breakpoints (mobile, tablet, desktop).</li>
+      </ul>
+      <div class="example-container code-block">
+          <pre class="exampleCode">[
+    {
+        "slidesPerView": "auto",
+        "loop": true,
+        "autoplay": {
+            "delay": 0,
+            "disableOnInteraction": false,
+            "pauseOnMouseEnter": true
+        },
+        "breakpoints": {
+            "320": {
+                "slidesPerView": 1
+            },
+            "768": {
+                "slidesPerView": 2
+            },
+            "1024": {
+                "slidesPerView": 3
+            }
+        }
+    }
+]</pre>
+          <button class="copy-btn" onclick="copyCode('Responsive Slider')">📋 Copy</button>
+      </div>
+
+      <!-- Autoplay with Delays Section -->
+      <h4>3. Autoplay with Delays:</h4>
+      <ul>
+        <li>Adjust autoplay delay for different screen sizes.</li>
+      </ul>
+      <div class="example-container code-block">
+          <pre class="exampleCode">[
+    {
+        "slidesPerView": "auto",
+        "loop": true,
+        "autoplay": {
+            "delay": 2000,
+            "disableOnInteraction": false,
+            "pauseOnMouseEnter": true
+        },
+        "breakpoints": {
+            "320": {
+                "autoplay": {
+                    "delay": 1000
+                }
+            },
+            "1024": {
+                "autoplay": {
+                    "delay": 2000
+                }
+            }
+        }
+    }
+]</pre>
+          <button class="copy-btn" onclick="copyCode('Autoplay with Delays')">📋 Copy</button>
+      </div>
+
+      <!-- All-In-One Example Section -->
+      <h4>4. All-In-One Example (Full Configuration):</h4>
+      <ul>
+        <li>Combines autoplay, loop, pagination, and breakpoints in a full configuration.</li>
+      </ul>
+      <div class="example-container code-block">
+          <pre class="exampleCode">[
+    {
+        "slidesPerView": "auto",
+        "loop": true,
+        "autoplay": {
+            "delay": 2000,
+            "disableOnInteraction": false,
+            "pauseOnMouseEnter": true
+        },
+        "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+        },
+        "breakpoints": {
+            "320": {
+                "slidesPerView": 1,
+                "autoplay": {
+                    "delay": 1000
+                }
+            },
+            "768": {
+                "slidesPerView": 2,
+                "autoplay": {
+                    "delay": 1500
+                }
+            },
+            "1024": {
+                "slidesPerView": 3,
+                "autoplay": {
+                    "delay": 2000
+                }
+            }
+        }
+    }
+]</pre>
+          <button class="copy-btn" onclick="copyCode('All-In-One Example')">📋 Copy</button>
+      </div>
+
+    </div>
+  </div>
+</div>
                </div>
             </div>
             <!-- Slider Settings Section -->
@@ -2362,9 +2532,9 @@ data-slider-settings='{
                   <div class="notes-settings" id="Note-settings">
                      <div class="horizontal-tabs">
                         <div class="Note-setting_outer evm_ws_outer" id="evm-Note">
-                           <div class="Note-settings">
+<div class="Note-settings">
                               <h2>⚠️ Important Developer Notes</h2>
-                              <div class="user-guide" id="Note-guide">
+                              <div class="user-guide evm_ws_outer" id="Note-guide">
                                  <ul>
                                     <li>
                                        Always close all opened HTML tags properly. Unclosed
@@ -2395,6 +2565,31 @@ data-slider-settings='{
                                     </li>
                                  </ul>
                               </div>
+  <div class="user-guide evm_ws_outer" id="Note-guide">
+    <ul>
+        <li>
+            Always ensure all required fields like <strong>review</strong>, <strong>options</strong>, <strong>product_title</strong>, <strong>price</strong>, and <strong>vendor</strong> are included in your settings.
+        </li>
+        <li>
+            If any of the fields such as <code>review</code>, <code>price</code>, or <code>product_title</code> are missing, make sure to add them.
+        </li>
+        <li>
+            Avoid using <code>double quotes " "</code> for values inside attributes, especially when injecting JSON or HTML. Instead, use <code>single quotes ' '</code> to avoid breaking the syntax.
+        </li>
+        <li>
+            Example of proper JSON within HTML attributes:
+            <div class="example-container code-block">
+                <pre class="exampleCode">&lt;div data-slider-settings='{"review": true, "options": true, "price": true}'&gt;&lt;/div&gt;
+                </pre>
+                <button class="copy-btn" onclick="copyCode('Example Code')">📋 Copy</button>
+            </div>
+        </li>
+        <li>
+            Always test your changes in a staging environment to ensure everything works as expected before deploying to production.
+        </li>
+    </ul>
+</div>
+
                            </div>
                         </div>
                      </div>
