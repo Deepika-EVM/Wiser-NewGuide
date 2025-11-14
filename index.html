@@ -2072,74 +2072,116 @@ wiserAddedToCart();
                         </div>
                      </div>
                      <!-- wiser drawer Guide -->
-                     <div
-                        class="Drawer-setting_outer evm_ws_outer"
-                        id="evm-Drawer-div"
-                        >
-                        <!-- Integration Guide: Default Drawer with Wiser Widgets -->
-                        <div class="DrawerWidget-settings">
-                           <h2>🛒 Wiser Drawer Widget Integration Guide</h2>
-                           <div class="user-guide">
-                              <ul>
-                                 <li>
-                                    <strong>Wrapper Container:</strong>
-                                    To display Wiser widgets in the default drawer, add the
-                                    following div inside the drawer container:
-                                    <pre><code>&lt;div class='ws-drawer-all'&gt;...&lt;/div&gt;</code></pre>
-                                 </li>
-                                 <li>
-                                    <strong>Wrapper Container:</strong>
-                                    Wrap all widget <code>&lt;div&gt;</code>s inside
-                                    <code>&lt;div class='ws-drawer-all'&gt;</code> to apply
-                                    drawer styling.
-                                 </li>
-                                 <li>
-                                    <strong>Widget Class:</strong>
-                                    Each widget must have <code>ws_crt_wgt</code> class.
-                                 </li>
-                                 <li>
-                                    <strong>Drawer Visibility:</strong>
-                                    Add <code>data-cart-view='true'</code> to show the
-                                    widget inside cart drawer.
-                                 </li>
-                                 <li>
-                                    <strong>Widget Type:</strong>
-                                    Use <code>data-wiser-widget</code> to define type like
-                                    <code>new_arrival</code>, <code>top_selling</code>, etc.
-                                 </li>
-                                 <li>
-                                    <strong>Product Count:</strong>
-                                    Use <code>data-no-of-products</code> to define total
-                                    number of products shown.
-                                 </li>
-                                 <li>
-                                    <strong>Products per Row:</strong>
-                                    Use <code>data-no-products-pre-row</code> to show 1, 2,
-                                    or more products per row.
-                                 </li>
-                                 <li>
-                                    <strong>Slider Layout:</strong>
-                                    To enable horizontal scroll, add
-                                    <code>data-product-view='slider'</code>.
-                                 </li>
-                                 <li>
-                                    <strong>Arrow Position:</strong>
-                                    Use <code>data-arrow-position</code> for arrow location.
-                                    Values include <code>ws-arrow-top-right</code>,
-                                    <code>ws-arrow-bottom-center</code>.
-                                 </li>
-                                 <li>
-                                    <strong>Enable Widget:</strong>
-                                    Add <code>data-enable-feature='true'</code> to activate
-                                    the widget.
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                        <!-- Example Divs -->
-                        <div class="example-container code-block" bis_skin_checked="1">
-                           <pre class="exampleCode">
-&lt;div class='ws-drawer-all'&gt;
+<div class="Drawer-setting_outer evm_ws_outer" id="evm-Drawer-div">
+    <!-- Integration Guide: Default Drawer with Wiser Widgets -->
+    <div class="DrawerWidget-settings">
+        <h2>🛒 Wiser Drawer Widget Integration Guide</h2>
+        <div class="user-guide">
+            <ul>
+                <li>
+                    <strong>Wrapper Container:</strong>
+                    To display Wiser widgets in the default drawer, add the
+                    following div inside the drawer container:
+                    <pre><code>&lt;div class='ws-drawer-all'&gt;...&lt;/div&gt;</code></pre>
+                </li>
+                <li>
+                    <strong>Wrapper Container:</strong>
+                    Wrap all widget <code>&lt;div&gt;</code>s inside
+                    <code>&lt;div class='ws-drawer-all'&gt;</code> to apply
+                    drawer styling.
+                </li>
+                <li>
+                    <strong>Widget Class:</strong>
+                    Each widget must have <code>ws_crt_wgt</code> class.
+                </li>
+                <li>
+                    <strong>Drawer Visibility:</strong>
+                    Add <code>data-cart-view='true'</code> to show the
+                    widget inside the cart drawer.
+                </li>
+                <li>
+                    <strong>Widget Type:</strong>
+                    Use <code>data-wiser-widget</code> to define the type like
+                    <code>new_arrival</code>, <code>top_selling</code>, <code>Recently_view</code>, <code>Related_products</code>, etc.
+                </li>
+                <li>
+                    <strong>Product Count:</strong>
+                    Use <code>data-no-of-products</code> to define total
+                    number of products shown.
+                </li>
+                <li>
+                    <strong>Products per Row:</strong>
+                    Use <code>data-no-products-pre-row</code> to show 1, 2,
+                    or more products per row.
+                </li>
+                <li>
+                    <strong>Arrow Position:</strong>
+                    Use <code>data-arrow-position</code> for arrow location.
+                    Values include <code>ws-arrow-top-right</code>,
+                    <code>ws-arrow-bottom-center</code>.
+                </li>
+                <li>
+                    <strong>Enable Widget:</strong>
+                    Add <code>data-enable-feature='true'</code> to activate
+                    the widget.
+                </li><li>
+                    <strong>Grid Layout:</strong>
+                    <strong>Note:</strong> To display products in a grid layout, you need to set the following:
+                    <code>data-product-view='grid'</code>.
+                    <p>
+                        This will arrange products in a grid layout rather than a horizontal slider.
+                        Use <code>data-no-products-pre-row</code> to control how many products appear in a row (e.g., 2 products per row).
+                    </p>
+                </li><li>
+                    <strong>Slider Layout:</strong>
+                    To enable horizontal scroll, add
+                    <code>data-product-view='slider'</code>.
+                </li>
+                  <li>
+                                 <strong>Responsive Slider:</strong>
+                                 For custom responsiveness like <code>1.5</code> or
+                                 <code>2.5</code> products, use
+                                 <code>data-slider-settings</code> and wrap the JSON in
+                                 <strong>single quotes</strong>.
+                                 <p>
+                                    Example of custom slider settings for 1.5 or 2.5
+                                    products, enabling dots, navigation, and adjusting space
+                                    between slides:
+                                 </p>
+                              </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <!-- Heading for Grid Layout Example -->
+    <strong style="
+    color: #411d57;
+    font-size: 20px;
+">Grid Layout Example</strong>
+    <div class="example-container code-block">
+        <pre class="exampleCode">&lt;div class='ws-drawer-all'&gt;
+    &lt;div class='evm-new-arrivals-product ws_crt_wgt'
+         data-wiser-widget='new_arrival'
+         data-wiser-page='cartdrawer'
+         data-cart-view='true'
+         data-no-of-products='4'
+         data-enable-feature='true'
+         data-no-products-pre-row='2'
+         data-product-view='grid'&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+        <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+    </div>
+
+    <!-- Heading for Slider Layout Example -->
+    <strong style="
+    color: #411d57;
+    font-size: 20px;
+">Slider view all div Layout Example</strong>
+    <div class="example-container code-block">
+        <pre class="exampleCode">&lt;div class='ws-drawer-all'&gt;
     &lt;div class='evm-new-arrivals-product ws_crt_wgt' data-wiser-page='cartdrawer'  data-design-view="true" data-wiser-widget='new_arrival' data-cart-view='true' 
          data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right'&gt;
     &lt;/div&gt;
@@ -2172,45 +2214,34 @@ wiserAddedToCart();
          data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right'&gt;
     &lt;/div&gt;
     &lt;/div&gt;
-    </pre
-                              >
-                           <button class="copy-btn" onclick="copyWidgetCode()">
-                           📋 Copy
-                           </button>
-                        </div>
-                        <div class="user-guide">
-                           <ul>
-                              <li>
-                                 <strong>Responsive Slider:</strong>
-                                 For custom responsiveness like <code>1.5</code> or
-                                 <code>2.5</code> products, use
-                                 <code>data-slider-settings</code> and wrap the JSON in
-                                 <strong>single quotes</strong>.
-                                 <p>
-                                    Example of custom slider settings for 1.5 or 2.5
-                                    products, enabling dots, navigation, and adjusting space
-                                    between slides:
-                                 </p>
-                              </li>
-                           </ul>
-                        </div>
-                        <div class="example-container code-block" bis_skin_checked="1">
-                           <pre class="exampleCode">
-&lt;div class='ws-drawer-all'&gt;
-    &lt;div class='evm-new-arrivals-product ws_crt_wgt' data-wiser-page='cartdrawer'  data-design-view="true" data-wiser-widget='new_arrival' data-cart-view='true' 
-         data-no-of-products='5' data-enable-feature='true' data-no-products-pre-row='1' data-product-view='slider' data-arrow-position='ws-arrow-top-right' 
+    </pre>
+        <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+    </div>
+
+    <!-- Heading for Responsive Slider Example -->
+    <strong style="
+    color: #411d57;
+    font-size: 20px;
+">Responsive Slider Example</strong>
+    <div class="example-container code-block">
+        <pre class="exampleCode">&lt;div class='ws-drawer-all'&gt;
+    &lt;div class='evm-new-arrivals-product ws_crt_wgt'
+         data-wiser-widget='new_arrival'
+         data-wiser-page='cartdrawer'
+         data-cart-view='true'
+         data-no-of-products='5'
+         data-enable-feature='true'
+         data-no-products-pre-row='1'
+         data-product-view='slider'
+         data-arrow-position='ws-arrow-top-right'
          data-slider-settings=
-    '{'loop':false,'breakpoints':{'0':{'slidesPerView':1,'spaceBetween':10},'300':{'slidesPerView':1.1,'spaceBetween':15},'768':{'slidesPerView':1.5,'spaceBetween':15},
-    '1024':{'slidesPerView':8,'spaceBetween':10}}}'&gt;
+    '{"loop":false,"breakpoints":{"0":{"slidesPerView":1,"spaceBetween":10},"300":{"slidesPerView":1.1,"spaceBetween":15},"768":{"slidesPerView":1.5,"spaceBetween":15},"1024":{"slidesPerView":8,"spaceBetween":10}}}'&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-    </pre
-                              >
-                           <button class="copy-btn" onclick="copyWidgetCode()">
-                           📋 Copy
-                           </button>
-                        </div>
-                     </div>
+        </pre>
+        <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
+    </div>
+</div>
                      <div
                         class="Drawer-setting_outer evm_ws_outer"
                         id="evm-QuickViewSwitch-div"
@@ -2604,3 +2635,4 @@ data-slider-settings='{
       <script src="index.js"></script>
    </body>
 </html>
+
