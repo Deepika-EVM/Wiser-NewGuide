@@ -954,33 +954,49 @@
                         <button class="tab-btn" data-tab="notes-Vendor">Notes</button>
                      </div>
                      <!-- overview for Vendor -->
-                     <div
-                        class="evm-tab-content tab-content-Vendor active"
-                        id="overview-Vendor"
-                        bis_skin_checked="1"
-                        >
+                     <div class="evm-tab-content tab-content-Vendor active" id="overview-Vendor" bis_skin_checked="1">
                         <h3>🛠️ Vendor Settings – Overview</h3>
+
+                        <!-- Condition description -->
+                        <p>
+                           <strong>Important:</strong> The Vendor section will <strong>only appear</strong> if both of the following conditions are met:
+                        </p>
+                        <ul>
+                           <li>The <strong>Vendor Toggle</strong> is enabled in <strong>Developer Settings</strong>.</li>
+                           <li>Above the <strong>Save</strong> button, there is a hidden <code>div</code> with <code>display: none;</code>. You must add the <strong>vendor value</strong> there for it to show.</li>
+                        </ul>
+                        <p>Once this is done, the Vendor tab will be visible alongside other product details.</p>
+
+                        <!-- Example of available sections -->
+                        <p>Available sections include:</p>
+                        <pre class="exampleCode">[
+                        "product_title",
+                        "vendor",
+                        "price",
+                        "review",
+                        "options"
+                     ]</pre>
+
+                        <!-- Existing instructions -->
                         <ul>
                            <li>
-                              <strong>Choose a Tag:</strong> Select a tag like
-                              <code>p</code>, <code>div</code>, or <code>span</code>.
+                                 <strong>Choose a Tag:</strong> Select a tag like
+                                 <code>p</code>, <code>div</code>, or <code>span</code>.
                            </li>
                            <li>
-                              <strong>How Tags Are Displayed:</strong> The appearance
-                              depends on the browser's default styling and your CSS.
+                                 <strong>How Tags Are Displayed:</strong> The appearance depends on the browser's default styling and your CSS.
                            </li>
                            <li>
-                              <strong>Add Class Name:</strong> Use classes like
-                              <code>Vendor-bold</code>, <code>Vendor-large</code>.
+                                 <strong>Add Class Name:</strong> Use classes like
+                                 <code>Vendor-bold</code>, <code>Vendor-large</code>.
                            </li>
                            <li>
-                              <strong>Theme Support:</strong> Theme styles apply
-                              automatically to known classes.
+                                 <strong>Theme Support:</strong> Theme styles apply automatically to known classes.
                            </li>
                         </ul>
-                        <pre class="exampleCode">
-&lt;h2 class="vendor-bold text-center"&gt;Your Vendor Here&lt;/h2&gt;</pre
-                           >
+
+                        <!-- Example code -->
+                        <pre class="exampleCode">&lt;h2 class="vendor-bold text-center"&gt;Your Vendor Here&lt;/h2&gt;</pre>
                      </div>
                      <!-- files for Vendor -->
                      <div class="evm-tab-content tab-content-Vendor" id="files-Vendor">
