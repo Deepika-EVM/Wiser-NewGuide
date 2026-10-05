@@ -1875,44 +1875,49 @@ wiserAddedToCart();
    </div>
  
    <!-- overview for Swatch -->
-   <div class="evm-tab-content tab-content-Swatch active" id="overview-Swatch">
-      <h3>🎨 Swatch Settings – Overview</h3>
-      <ul>
-         <li>
-            <strong>Add Value:</strong> Add <code>"swatch"</code> in Developer Settings. Swatches will not show without it.
-         </li>
-         <li>
-            <strong>Remove Options:</strong> Remove <code>"options"</code> when swatch is added.
-         </li>
-         <li>
-            <strong>Enable Swatches:</strong> Turn on <strong>Enable Swatches</strong> in Customize → Swatches Settings.
-         </li>
-         <li>
-            <strong>Settings:</strong> Choose Display Type (Color, Image or Text), swatch Width, Height and Border Radius,
-            +N Behaviour (Grid, Slider, Quick View or Product Page) and how many Swatch Types to show (1, 2 or 3).
-         </li>
-      </ul>
-      <p>Available sections include:</p>
-      <pre class="exampleCode">[
+<div class="evm-tab-content tab-content-Swatch active" id="overview-Swatch">
+   <h3>🎨 Swatch Settings – Overview</h3>
+   <ul>
+      <li>
+         <strong>Add Value:</strong> Add <code>"swatch"</code> in Developer Settings. Swatches will not show without it.
+      </li>
+      <li>
+         <strong>Display None Setting:</strong> In Developer Settings, above the Save button, there is a <strong>Display None</strong> setting where values are shown. Please add <code>"swatch"</code> there as well.
+      </li>
+      <li>
+         <strong>Remove Options:</strong> Remove <code>"options"</code> when swatch is added.
+      </li>
+      <li>
+         <strong>Enable Swatches:</strong> Turn on <strong>Enable Swatches</strong> in Customize → Swatches Settings.
+      </li>
+      <li>
+         <strong>Settings:</strong> Choose Display Type (Color, Image or Text), Swatch Width, Height and Border Radius,
+         +N Behaviour (Grid, Slider, Quick View or Product Page) and how many Swatch Types to show (1, 2 or 3).
+      </li>
+   </ul>
+
+   <p>Available sections include:</p>
+   <pre class="exampleCode">[
     "product_title",
     "review",
     "vendor",
     "price",
     "options"
 ]</pre>
-      <p>Swatch enabled (remove "options", add "swatch"):</p>
-      <div class="example-container code-block">
-         <pre class="exampleCode">[
+
+   <p>Swatch enabled (remove "options", add "swatch"):</p>
+   <div class="example-container code-block">
+      <pre class="exampleCode">[
     "product_title",
     "review",
     "vendor",
     "price",
     "swatch"
 ]</pre>
-         <button class="copy-btn">📋 Copy</button>
-         <a href="#" id="goToExamples" data-target="Swatch" class="Swatch-example-link">Click here and check example</a>
-      </div>
+      <button class="copy-btn">📋 Copy</button>
+      <a href="#" id="goToExamples" data-target="Swatch" class="Swatch-example-link">Click here and check example</a>
    </div>
+</div>
  
    <!-- files for Swatch -->
    <div class="evm-tab-content tab-content-Swatch" id="files-Swatch">
