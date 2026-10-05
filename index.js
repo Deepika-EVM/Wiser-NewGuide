@@ -169,3 +169,132 @@ document.addEventListener("click", e => {
     document.querySelectorAll('[id^="directcontainer-"]').forEach(d => d.style.display = "none");
   }
 });
+(function () {
+  const demo = document.getElementById("swatchDemo");
+  if (!demo) return;
+ 
+  const typeSel = demo.querySelector("#swDemoType");
+  const widthIn = demo.querySelector("#swDemoWidth");
+  const heightIn = demo.querySelector("#swDemoHeight");
+  const radiusIn = demo.querySelector("#swDemoRadius");
+  const plusSel = demo.querySelector("#swDemoPlus");
+  const row = demo.querySelector("#swDemoRow");
+  const note = demo.querySelector("#swDemoNote");
+ 
+  const COLORS = [
+    ["Red", "#e53935"], ["Blue", "#1e88e5"], ["Green", "#43a047"],
+    ["Black", "#212121"], ["Yellow", "#fdd835"], ["Pink", "#ec407a"],
+    ["Purple", "#8e24aa"], ["Orange", "#fb8c00"],
+  ];
+  const SIZES = ["S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"];
+  const VISIBLE = 5; // swatches shown before "+N"
+ 
+  const NOTES = {
+    grid_expand: "Grid: clicking +N expands all remaining swatches on the card.",
+    slider: "Slider: clicking +N shows all swatches in a sliding row.",
+    quick_view: "Quick View: clicking +N opens the product in a popup.",
+    redirect: "Product Page: clicking +N redirects the customer to the product page.",
+  };
+ 
+  let expanded = false;
+ 
+  // Same limits as the admin fields (min / max)
+  function clamp(value, min, max, fallback) {
+    const n = parseInt(value, 10);
+    if (isNaN(n)) return fallback;
+    return Math.min(max, Math.max(min, n));
+  }
+ 
+  function applyStyle(el, w, h, r) {
+    el.style.width = w + "px";
+    el.style.height = h + "px";
+    el.style.borderRadius = r + "px";
+  }
+ 
+  function buildSwatch(index, type, w, h, r) {
+    const el = document.createElement("span");
+    el.className = "evm-sw-item";
+    applyStyle(el, w, h, r);
+ 
+    if (type === "text") {
+      el.textContent = SIZES[index];
+      el.title = SIZES[index];
+    } else {
+      const [name, color] = COLORS[index];
+      el.title = name;
+      el.style.backgroundColor = color;
+      if (type === "image") {
+        // fake "image" swatch using a pattern (no external files needed)
+        el.style.backgroundImage =
+          "repeating-linear-gradient(45deg, rgba(255,255,255,.35) 0 4px, transparent 4px 8px)";
+      }
+    }
+ 
+    el.addEventListener("click", () => {
+      row.querySelectorAll(".evm-sw-item.active").forEach((s) => s.classList.remove("active"));
+      el.classList.add("active");
+    });
+    return el;
+  }
+ 
+  function render() {
+    const type = typeSel.value;
+    const w = clamp(widthIn.value, 10, 100, 32);
+    const h = clamp(heightIn.value, 10, 100, 32);
+    const r = clamp(radiusIn.value, 0, 50, 4);
+    const behaviour = plusSel.value;
+    const total = type === "text" ? SIZES.length : COLORS.length;
+    const extra = total - VISIBLE;
+ 
+    row.innerHTML = "";
+    row.classList.toggle("evm-sw-slider-mode", expanded && behaviour === "slider");
+ 
+    const count = expanded && (behaviour === "grid_expand" || behaviour === "slider")
+      ? total
+      : VISIBLE;
+ 
+    for (let i = 0; i < count; i++) {
+      row.appendChild(buildSwatch(i, type, w, h, r));
+    }
+ 
+    // "+N" button (hidden once expanded)
+    if (!expanded && extra > 0) {
+      const plus = document.createElement("span");
+      plus.className = "evm-sw-item evm-sw-plus";
+      plus.textContent = "+" + extra;
+      applyStyle(plus, w, h, r);
+      plus.addEventListener("click", () => handlePlus());
+      row.appendChild(plus);
+    }
+ 
+    if (!note.dataset.clicked) note.textContent = NOTES[behaviour];
+  }
+ 
+  function handlePlus() {
+    const behaviour = plusSel.value;
+    note.dataset.clicked = "1";
+ 
+    if (behaviour === "grid_expand" || behaviour === "slider") {
+      expanded = true;
+      note.textContent = NOTES[behaviour] + " (expanded)";
+      render();
+    } else if (behaviour === "quick_view") {
+      note.textContent = "👉 Quick View popup would open now.";
+    } else {
+      note.textContent = "👉 Customer would be redirected to the product page now.";
+    }
+  }
+ 
+  function resetAndRender() {
+    expanded = false;
+    delete note.dataset.clicked;
+    render();
+  }
+ 
+  [typeSel, widthIn, heightIn, radiusIn, plusSel].forEach((el) => {
+    el.addEventListener("input", resetAndRender);
+    el.addEventListener("change", resetAndRender);
+  });
+ 
+  render();
+})();
