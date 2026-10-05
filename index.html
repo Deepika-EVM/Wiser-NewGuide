@@ -1848,22 +1848,19 @@ wiserAddedToCart();
     </div>
   </div>
 </div>
-                  <div class="evm_swatch-setting_outer evm_ws_outer" id="Swatch">
+                <div class="evm_swatch-setting_outer evm_ws_outer" id="Swatch">
    <div class="evm_swatch-settings">
       <h1>Swatch Settings</h1>
       <div class="user-guide" id="Swatch-settings-guide">
          <ul>
             <li>
-               <strong>Step 1 – Developer Settings:</strong> Swatches will NOT show until the
-               <code>"swatch"</code> value is added in <strong>Developer Settings</strong>.
+               <strong>Add Value:</strong> In <strong>Developer Settings</strong>, add <code>"swatch"</code> to show swatches on product cards.
             </li>
             <li>
-               <strong>Step 2 – Remove <code>"options"</code>:</strong> If swatches are enabled, remove
-               the <code>"options"</code> value. Otherwise variants will appear twice – once as text and once as swatches.
+               <strong>Remove Options:</strong> Remove <code>"options"</code>, otherwise variants will show twice (once as text, once as swatch).
             </li>
             <li>
-               <strong>Step 3 – Customize:</strong> After saving Developer Settings, open
-               <strong>Customize → Swatches Settings</strong> and configure the look and behaviour.
+               <strong>Enable:</strong> Go to <strong>Customize → Swatches Settings</strong>, turn on <strong>Enable Swatches</strong> and click Save.
             </li>
          </ul>
       </div>
@@ -1880,14 +1877,21 @@ wiserAddedToCart();
    <!-- overview for Swatch -->
    <div class="evm-tab-content tab-content-Swatch active" id="overview-Swatch">
       <h3>🎨 Swatch Settings – Overview</h3>
- 
-      <p>
-         <strong>Important:</strong> The Swatch feature will <strong>only appear</strong> on product cards
-         if the <code>"swatch"</code> value is added in <strong>Developer Settings</strong>.
-      </p>
- 
-      <h4>Step 1 – Add the "swatch" value in Developer Settings</h4>
-      <p>Go to <strong>Developer Settings</strong> and add <code>"swatch"</code> to the sections list.</p>
+      <ul>
+         <li>
+            <strong>Add Value:</strong> Add <code>"swatch"</code> in Developer Settings. Swatches will not show without it.
+         </li>
+         <li>
+            <strong>Remove Options:</strong> Remove <code>"options"</code> when swatch is added.
+         </li>
+         <li>
+            <strong>Enable Swatches:</strong> Turn on <strong>Enable Swatches</strong> in Customize → Swatches Settings.
+         </li>
+         <li>
+            <strong>Settings:</strong> Choose Display Type (Color, Image or Text), swatch Width, Height and Border Radius,
+            +N Behaviour (Grid, Slider, Quick View or Product Page) and how many Swatch Types to show (1, 2 or 3).
+         </li>
+      </ul>
       <p>Available sections include:</p>
       <pre class="exampleCode">[
     "product_title",
@@ -1896,8 +1900,7 @@ wiserAddedToCart();
     "price",
     "options"
 ]</pre>
- 
-      <p><strong>✅ Correct – Swatches enabled (no "options"):</strong></p>
+      <p>Swatch enabled (remove "options", add "swatch"):</p>
       <div class="example-container code-block">
          <pre class="exampleCode">[
     "product_title",
@@ -1906,83 +1909,8 @@ wiserAddedToCart();
     "price",
     "swatch"
 ]</pre>
-         <button class="copy-btn" onclick="copyWidgetCode()">📋 Copy</button>
-      </div>
- 
-      <p><strong>❌ Wrong – both "options" and "swatch" added:</strong></p>
-      <pre class="exampleCode">[
-    "product_title",
-    "review",
-    "vendor",
-    "price",
-    "options",
-    "swatch"
-]</pre>
-      <p>
-         ⚠️ <strong>Why?</strong> <code>"options"</code> shows variants as plain <strong>text</strong>,
-         and <code>"swatch"</code> shows the same variants as <strong>swatches</strong>.
-         If both are present, the customer will see the variants twice. So always
-         <strong>remove "options"</strong> when you add <strong>"swatch"</strong>.
-      </p>
-      <p>If you want to go back to text variants, remove <code>"swatch"</code> and add <code>"options"</code> again.</p>
- 
-      <h4>Step 2 – Customize → Swatches Settings</h4>
-      <p>After the Developer Settings value is saved, open <strong>Customize</strong> and find <strong>Swatches Settings</strong>.</p>
-      <ul>
-         <li>
-            <strong>Enable Swatches:</strong> Master toggle. When ON, all other swatch fields are shown.
-            When OFF, the fields are hidden and swatches do not appear on product cards.
-         </li>
- 
-         <li>
-            <strong>Display Type:</strong> How each swatch looks.
-            <ul style="margin-top: 6px">
-               <li><code>Color</code> – Shows a colored circle/box based on the variant color (e.g., Red, Navy Blue).</li>
-               <li><code>Image</code> – Shows a small variant image as the swatch.</li>
-               <li><code>Text</code> – Shows the variant name as text (e.g., S, M, L).</li>
-            </ul>
-         </li>
- 
-         <li>
-            <strong>Style:</strong> Controls the size and shape of each swatch.
-            <ul style="margin-top: 6px">
-               <li><code>Width (px)</code> – Swatch width. Allowed range: 10 – 100. Default: 32.</li>
-               <li><code>Height (px)</code> – Swatch height. Allowed range: 10 – 100. Default: 32.</li>
-               <li><code>Border Radius (px)</code> – Roundness of corners. Allowed range: 0 – 50. Default: 4.
-                  Use <code>0</code> for a square swatch and <code>50</code> for a full circle (when width = height).</li>
-            </ul>
-         </li>
- 
-         <li>
-            <strong>+N Behaviour:</strong> When a product has more swatches than can fit, the extra ones are shown as
-            <code>+N</code> (e.g., <code>+3</code>). This setting decides what happens when the customer clicks it.
-            <ul style="margin-top: 6px">
-               <li><code>Grid</code> – Expands and shows all swatches in a grid on the card. <em>(Default)</em></li>
-               <li><code>Slider</code> – Shows all swatches in a sliding row.</li>
-               <li><code>Quick View (Open popup)</code> – Opens the product in a Quick View popup.</li>
-               <li><code>Product Page</code> – Redirects the customer to the product page.</li>
-            </ul>
-         </li>
- 
-         <li>
-            <strong>Swatch Types to Show:</strong> Choose how many option types (e.g., Color, Size, Material)
-            should be displayed as swatches on the card: <code>1</code>, <code>2</code> or <code>3</code>.
-            Default is <code>2</code>.
-            <br>Example: If a product has Color, Size and Material and you select <code>2</code>,
-            only the first two option types will show as swatches.
-         </li>
-      </ul>
- 
-      <p><strong>Don't forget to click Save</strong> after changing any setting.</p>
- 
-      <div class="example-container code-block">
-         <pre class="exampleCode">Display Type: Color
-Width: 32 | Height: 32 | Border Radius: 4
-+N Behaviour: Grid
-Swatch Types to Show: 2</pre>
-         <a href="#" id="goToExamples" data-target="Swatch" class="Swatch-example-link">
-            Click here and check example
-         </a>
+         <button class="copy-btn">📋 Copy</button>
+         <a href="#" id="goToExamples" data-target="Swatch" class="Swatch-example-link">Click here and check example</a>
       </div>
    </div>
  
@@ -1997,57 +1925,39 @@ Swatch Types to Show: 2</pre>
  
    <!-- test cases for Swatch -->
    <div class="evm-tab-content tab-content-Swatch" id="test-cases-Swatch">
-      <h2>Swatch Test Cases</h2>
+      <h2>Product Card Test Cases</h2>
       <div class="test-cases">
          <div class="test-case">
-            <h3>Test Case 1 – Swatch not showing</h3>
-            <p>Check that <code>"swatch"</code> is added in Developer Settings and Enable Swatches is ON.</p>
-            <div class="test-status success"><i class="fas fa-check-circle"></i> <span>Passed</span></div>
+            <h3>Test Case 1</h3>
+            <p>Swatch not showing: check <code>"swatch"</code> is added and Enable Swatches is on.</p>
+            <div class="test-status success">
+               <i class="fas fa-check-circle"></i> <span>Passed</span>
+            </div>
          </div>
          <div class="test-case">
-            <h3>Test Case 2 – Variants showing twice</h3>
-            <p>Make sure <code>"options"</code> is removed from Developer Settings.</p>
-            <div class="test-status success"><i class="fas fa-check-circle"></i> <span>Passed</span></div>
-         </div>
-         <div class="test-case">
-            <h3>Test Case 3 – Settings not applying</h3>
-            <p>Click <strong>Save</strong> and hard refresh the storefront (Ctrl + Shift + R).</p>
-            <div class="test-status success"><i class="fas fa-check-circle"></i> <span>Passed</span></div>
+            <h3>Test Case 2</h3>
+            <p>Variants showing twice: check <code>"options"</code> is removed.</p>
+            <div class="test-status success">
+               <i class="fas fa-check-circle"></i> <span>Passed</span>
+            </div>
          </div>
       </div>
    </div>
  
    <!-- example for Swatch -->
    <div class="evm-tab-content tab-content-Swatch" id="examples-Swatch">
-      <h2 style="font-size: 24px; margin-bottom: 1rem">🎨 Swatch – Visual Guide</h2>
-      <p style="font-size: 15px; margin-bottom: 1.5rem">
-         This guide shows how each Swatch setting affects the product card.
-      </p>
-      <!-- Add screenshot here -->
-      <div style="text-align: center; margin-bottom: 20px">
-         <img src="ADD_SWATCH_SCREENSHOT_URL" alt="Swatch Guide"
-              style="max-width: 60%; height: auto; border: 1px solid #e1dfe7; border-radius: 10px; box-shadow: 0 2px 4px rgba(65, 29, 87, 0.2);" />
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-         <div><strong>🎨 Color:</strong> Colored swatches based on variant color.</div>
-         <div><strong>🖼️ Image:</strong> Small variant images as swatches.</div>
-         <div><strong>🔤 Text:</strong> Variant names shown as text swatches.</div>
-         <div><strong>➕ +N Grid:</strong> Extra swatches expand in a grid.</div>
-         <div><strong>↔️ +N Slider:</strong> Extra swatches slide horizontally.</div>
-         <div><strong>🪟 +N Quick View:</strong> Click opens the Quick View popup.</div>
-         <div><strong>🔗 +N Product Page:</strong> Click redirects to the product page.</div>
+      <h2>Product Card Examples</h2>
+      <div class="example-block">
+         <pre><code>// Add swatch screenshot here</code></pre>
       </div>
    </div>
  
    <!-- notes for Swatch -->
    <div class="evm-tab-content tab-content-Swatch" id="notes-Swatch">
       <h2>Additional Notes</h2>
-      <ul>
-         <li>Always add <code>"swatch"</code> in Developer Settings first, then configure Customize → Swatches Settings.</li>
-         <li>Never keep <code>"options"</code> and <code>"swatch"</code> together – variants will appear twice.</li>
-         <li>Width and Height must be between 10 and 100. Border Radius must be between 0 and 50.</li>
-         <li>If you face any issue, contact the developer team.</li>
-      </ul>
+      <p>
+         Always add <code>"swatch"</code> first and remove <code>"options"</code>, then enable swatches from Customize and save.
+      </p>
    </div>
 </div>
                </div>
